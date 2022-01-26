@@ -24,9 +24,21 @@ The site will use HTML, CSS and Javascript to create an interactive, engaging an
 * As the site owner, I want the user to have a pleasant interactive experience.
 * As the site owner, I want the user to engage with us through our social media platforms.
 
+### Wireframes
+
+Desktop
+![Desktop](readme/computer-wireframe.png)
+
+Tablet <br>
+![Tablet](readme/ipad-wireframe.png)
+
+Phone
+![phone](readme/phone-wireframe.png)
+
 ## Design
 
 ### Colour Scheme
+RGB
  ![](readme/colour-palette.png)
  
 ### Typography
