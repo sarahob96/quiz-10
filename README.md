@@ -11,16 +11,16 @@ The site will use HTML, CSS and Javascript to create an interactive, engaging an
 
 ### User Goals
 * As a user, I want to easily navigate through the site.
-* As a user, I want to be able to choose between various quizzes.
+* As a user, I want to be able to play the current weeks quiz.
 * As a user, I want to see what score I have achieved from the quiz.
 
 ### Returning User Goals
 * As a returning user, I want to play the most recent quiz.
-* As a returning user, I want to find past quizzes.
+* As a returning user, I want to play the past weeks quiz.
 * As a returning user, I want to find the sites social links.
 
 ### Site Owner Goals
-* As the site owner, I want the user to have a selection of quizzes to choose from.
+* As the site owner, I want the user to play the previous quiz if they've missed it.
 * As the site owner, I want the user to have a pleasant interactive experience.
 * As the site owner, I want the user to engage with us through our social media platforms.
 
@@ -40,7 +40,7 @@ Tablet <br>
 
 Phone
 ![phone](readme/phone-wireframe.png)
-
+![phone-quiz](readme/phone-quiz.png)
 ## Design
 
 ### Colour Scheme
