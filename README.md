@@ -27,10 +27,10 @@ The site will use HTML, CSS and Javascript to create an interactive, engaging an
 ### Wireframes
 
 Desktop
-![Desktop](readme/computer-wireframe.png)
+![Desktop](readme/desktop-wireframe.png)
 
 Tablet <br>
-![Tablet](readme/ipad-wireframe.png)
+![Tablet](readme/tablet-wireframe.png)
 
 Phone
 ![phone](readme/phone-wireframe.png)
