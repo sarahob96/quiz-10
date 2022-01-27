@@ -29,6 +29,12 @@ The site will use HTML, CSS and Javascript to create an interactive, engaging an
 Desktop
 ![Desktop](readme/desktop-wireframe.png)
 
+![quizstart](readme/quiz-start.png)
+
+![question](readme/question.png)
+
+![user-score](readme/user-score.png)
+
 Tablet <br>
 ![Tablet](readme/tablet-wireframe.png)
 
