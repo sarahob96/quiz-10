@@ -30,7 +30,19 @@ body{
     color:#2A6673;
 
 }
+
+.weekly-quiz{
+    background-color: #349BD3;
+    height: 400px;
+    width:100%;
+}
+
+.last-quiz{
+    background-color: #349BD3;
+    height:400px;
+    width:100%;
+}
 footer{
-    position: fixed;
+    
     bottom: 0px;
 }
