@@ -15,6 +15,7 @@ body{
     color:#4437EE;
     text-align: center;
     font-size: 280%;
+    letter-spacing: 2px;
     
 }
 .tag-line{
@@ -26,21 +27,43 @@ body{
 .weekly-quiz-heading{
     text-decoration: underline;
     color:#2A6673;
+    letter-spacing: 2px;
+    font-size: 150%;
+    text-align: center;
+    padding-top: 40px;
+       
 }
 
 .about-heading{
     text-decoration: underline;
     color:#2A6673;
+    letter-spacing: 2px;
+    font-size: 150%;
+    text-align: center;
 
+
+}
+.about-text{
+    text-align: center;
+    padding: 20px;
+    font-weight: bolder;
+    font-size: larger;
 }
 .last-quiz-heading{
     text-decoration: underline;
     color:#2A6673;
+    letter-spacing: 2px;
+    font-size: 150%;
+    text-align: center;
+    padding-top: 50px;
 
 }
+/* weekly-quiz section*/
+
+
 
 .weekly-quiz{
-    background-color: #349BD3;
+   
     height: 500px;
     width:100%;
     padding-top: 90px;
@@ -61,7 +84,7 @@ body{
 }
 
 .last-quiz{
-    background-color: #349BD3;
+
     height:500px;
     width:100%;
     padding-top: 90px;
