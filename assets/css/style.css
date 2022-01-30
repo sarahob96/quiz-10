@@ -7,7 +7,8 @@
 body{
 
     font-family: Darker Grotesque;
-    background-color: #B0CBD2; 
+    background-color: #B0CBD2;
+    height:100vh; 
 }
 
 .main-heading{
@@ -52,7 +53,7 @@ body{
     overflow: hidden;
   
 }
-.image{
+.iceberg-image{
 
    max-height:100%;
    width:80%;
@@ -61,20 +62,27 @@ body{
 
 .last-quiz{
     background-color: #349BD3;
-    height:400px;
+    height:500px;
     width:100%;
     padding-top: 90px;
 }
 
 .harry-potter-quiz{
- height:500px;
+ height:450px;
  width:80%;
- background-color:#4437EE;
  text-align: center;
  margin: 0 auto;
 
 }
 
+.harry-potter-image{
+    max-height: 100%;
+    width:80%;
+}
+.harry-potter-background{
+    height:100vh;
+    width:100%;
+}
 
 .antarctica-quiz-background{
     height:100vh;
@@ -84,4 +92,22 @@ body{
 footer{
     
     bottom: 0px;
+}
+
+
+.start-page{
+    width:100vw;
+    height:100vh;
+    position:relative;
+   
+    
+}
+.welcome{
+    width: 60%;
+    height: 400px;
+    background-color: #2A6673;
+    position:absolute;
+    top:30%;
+    right:20%;
+
 }
