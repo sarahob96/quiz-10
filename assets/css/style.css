@@ -1,4 +1,36 @@
 body{
 
     font-family: Roboto;
+    background-color: #B0CBD2; 
+}
+
+.main-heading{
+    color:#4437EE;
+    text-align: center;
+    
+}
+.tag-line{
+    text-align: center;
+    color:#4437EE;
+    font-style: italic;
+}
+
+.weekly-quiz-heading{
+    text-decoration: underline;
+    color:#2A6673;
+}
+
+.about-heading{
+    text-decoration: underline;
+    color:#2A6673;
+
+}
+.last-quiz-heading{
+    text-decoration: underline;
+    color:#2A6673;
+
+}
+footer{
+    position: fixed;
+    bottom: 0px;
 }
