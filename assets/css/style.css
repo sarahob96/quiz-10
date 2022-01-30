@@ -1,12 +1,13 @@
 body{
 
-    font-family: Roboto;
+    font-family: Darker Grotesque;
     background-color: #B0CBD2; 
 }
 
 .main-heading{
     color:#4437EE;
     text-align: center;
+    font-size: 280%;
     
 }
 .tag-line{
