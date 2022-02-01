@@ -112,6 +112,10 @@ body{
     width:100%;
 
 }
+
+.antarctica-section{
+    height: 100vh;
+}
 footer{
     
     bottom: 0px;
@@ -119,12 +123,40 @@ footer{
 
 
 .start-page{
-    width:100vw;
-    height:100vh;
     position:relative;
    
     
 }
+
+.slide1{
+height: 400px;
+width: 300px;
+transform: translate(180%,-130%);
+background-color: #4437EE;
+}
+
+.slide2{
+
+    height: 400px;
+    width: 300px;
+    transform: translate(180%,-230%);
+    background-color: #B0CBD2;
+    }
+   
+   .slide3{
+        height: 400px;
+        width: 300px;
+        transform: translate(180%,-330%);
+        background-color: #4437EE;
+        }  
+        
+  
+.slide4{
+            height: 400px;
+            width: 300px;
+            transform: translate(180%, -430%);
+            background-color: #B0CBD2;
+            }
 .welcome{
     width: 60%;
     height: 400px;
@@ -134,3 +166,4 @@ footer{
     right:20%;
 
 }
+

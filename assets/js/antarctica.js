@@ -1,6 +1,20 @@
+//start section
 const start= document.getElementsByClassName("start-btn");
 const startPage= document.getElementsByClassName("start-page");
+
+//rules section
 const rulesPage= document.getElementsByClassName("quiz-rules");
+const beginBtn= document.getElementsByClassName("begin-btn");
+
+//questions section
+const questions= document.getElementsByClassName("quiz-section");
+
+
+let score=0;
+let moreQuestions=[];
+let count=0;
+let currentQuestion={};
+let maximumQuestions= 10;
 
 let antarcticaQuestions=[
     {
@@ -71,7 +85,7 @@ let antarcticaQuestions=[
         c: "Researchers",
         d: "Politicians"
     },
-    correctAnswer="c"
+    correctAnswer:"c"
 },
 {
     question: "Which continent is Antarctica closest to?",
@@ -81,7 +95,7 @@ let antarcticaQuestions=[
         c: "Australia",
         d: "Europe"
     },
-    correctAnswer="c"
+    correctAnswer:"c"
 },
 {
     question: "The world's longest glacier is found on Antarctica. What is it called?",
@@ -91,7 +105,7 @@ let antarcticaQuestions=[
         c: "Beardmore",
         d: "Scott"
     },
-    correctAnswer="b"
+    correctAnswer:"b"
 },
 {
   question: "What research base is located at the South Pole?",
@@ -101,19 +115,27 @@ let antarcticaQuestions=[
       c:"Molodezhnaya Research Base",
       d:"Amundsen-Scott Research Base"
   },
-  correctAnswers="d"
+  correctAnswers:"d"
 }
 ]
 
+// start button
+start.addEventListener('click', quizStart)
 
-
-
-function buildQuiz{
- 
-    
-function displayQuestions{
-
-    let output=[];
-    let answers;
+function quizStart(){
+startPage.classList.add('hide')
+questions.classList.remove('hide')
 }
+
+beginQuiz= () =>
+score=0;
+count=0;
+moreQuestions=[...antarcticaQuestions];
+
+
+function getQuestion(){
+    count++;
+    if (moreQuestions.length === 0 || count >= maximumQuestions) {
+
+    }
 }
