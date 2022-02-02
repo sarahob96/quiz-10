@@ -1,20 +1,20 @@
 //start section
-const start= document.getElementsByClassName("start-btn");
-const startPage= document.getElementsByClassName("start-page");
+const startBtn = document.getElementsByClassName("start-btn");
+const startPage = document.getElementsByClassName("start-page");
 
 //rules section
-const rulesPage= document.getElementsByClassName("quiz-rules");
-const beginBtn= document.getElementsByClassName("begin-btn");
+const rulesPage = document.getElementsByClassName("quiz-rules");
+const beginBtn = document.getElementsByClassName("begin-btn");
 
 //questions section
-const questions= document.getElementsByClassName("quiz-section");
+const questions = document.getElementsByClassName("quiz-section");
 
 
-let score=0;
-let moreQuestions=[];
-let count=0;
-let currentQuestion={};
-let maximumQuestions= 10;
+let score = 0;
+let moreQuestions = [];
+let count = 0;
+let currentQuestion = {};
+let maximumQuestions = 10;
 
 let antarcticaQuestions=[
     {
@@ -120,12 +120,13 @@ let antarcticaQuestions=[
 ]
 
 // start button
-start.addEventListener('click', quizStart)
+startBtn.addEventListener('click', quizStart)
 
-function quizStart(){
-startPage.classList.add('hide')
+function quizStart() {
+startBtn.classList.add('hide')
 questions.classList.remove('hide')
 }
+
 
 beginQuiz= () =>
 score=0;
