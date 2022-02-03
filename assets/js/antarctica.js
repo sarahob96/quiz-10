@@ -9,8 +9,9 @@ const beginBtn = document.getElementsByClassName("begin-btn")
 //questions section
 const questions = document.getElementById("quiz-section")
 const questionTitle = document.getElementById("antarctica-questions")
+const nextBtn = document.getElementById("next-btn")
 
-
+let index = 0;
 let score = 0;
 let count = 0;
 let moreQuestions = [];
@@ -117,6 +118,11 @@ let antarcticaQuestions = [
 // start button
 startBtn.addEventListener('click', quizStart)
 
+// next button
+nextBtn.addEventListener('click', nextButton)
+
+
+
 function quizStart() {
 startBtn.classList.add('hide')
 startPage.classList.add('hide')
@@ -140,3 +146,11 @@ function getQuestion() {
         questionTitle.innerText= nextQuestion.question
 }
 
+function nextButton(){
+    randomQuestion++;
+    nextQ();
+}
+
+function nextQ() {
+    getQuestion(randomQuestion[nextQuestion])
+}
