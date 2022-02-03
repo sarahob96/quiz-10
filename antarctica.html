@@ -19,21 +19,21 @@
 <body>
 
     <section class="antarctica-section">
-    <img src="assets/images/penguins-1.jpeg" alt="penguins in the antarctica" class="antarctica-quiz-background">
-
+    
     <!-- Start page with start button-->
-    <div class="start-page slide1">
+    <div id="start-page" class="start-page slide">
         <div class="start-text">
          <h2> Welcome to the Antarctica Quiz</h2>
             <p> Click Start to begin</p>
      </div>
-         <div> <button class="start-btn"> Start </button>
+         <div> 
+             <button id="start-btn"> Start </button>
          </div>  
     </div>
 
     <!-- Quiz rules -->
-    <div class="quiz-rules slide2 hide"> 
-        <div class="heading-rules-page">
+    <div class="quiz-rules hide"> 
+        <div class="heading-rules-page slide">
             <h3> Rules </h3>
         </div>
         <div class="rules-text"> 
@@ -48,7 +48,7 @@
 
     <!-- Antarctica quiz section-->
 
-    <div class="quiz-section slide3 hide"> 
+    <div id="quiz-section" class="hide slide"> 
         <h1 class="antarctica.title"> Antarctica Quiz </h1>
     <div class="antarctica-questions">
         <div class="choice">
@@ -74,7 +74,7 @@
 
 
   <!-- Results section -->   
-  <div class="results-container slide4 hide">
+  <div class="results-container hide slide">
       <div class="message"> Thanks for trying out this weeks quiz pick! </div>
   
   <div class="final-score"> 

@@ -1,13 +1,13 @@
 //start section
-const startBtn = document.getElementsByClassName("start-btn");
-const startPage = document.getElementsByClassName("start-page");
+const startBtn = document.getElementById("start-btn")
+const startPage = document.getElementById("start-page")
 
 //rules section
-const rulesPage = document.getElementsByClassName("quiz-rules");
-const beginBtn = document.getElementsByClassName("begin-btn");
+const rulesPage = document.getElementsByClassName("quiz-rules")
+const beginBtn = document.getElementsByClassName("begin-btn")
 
 //questions section
-const questions = document.getElementsByClassName("quiz-section");
+const questions = document.getElementById("quiz-section")
 
 
 let score = 0;
@@ -124,7 +124,9 @@ startBtn.addEventListener('click', quizStart)
 
 function quizStart() {
 startBtn.classList.add('hide')
+startPage.classList.add('hide')
 questions.classList.remove('hide')
+
 }
 
 
