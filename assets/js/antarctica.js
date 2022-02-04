@@ -11,13 +11,13 @@ const questions = document.getElementById("quiz-section")
 const questionTitle = document.getElementById("antarctica-questions")
 const nextBtn = document.getElementById("next-btn")
 
-let index = 0;
+
 let score = 0;
 let count = 0;
 let moreQuestions = [];
-
 let nextQuestion = {};
 let maximumQuestions = 10;
+let randomQuestion;
 
 let antarcticaQuestions = [
     {
@@ -135,22 +135,22 @@ function beginQuiz() {
 
 score = 0;
 count = 0;
+randomQuestion = 0;
 moreQuestions = [...antarcticaQuestions]
 getQuestion()
 }
 
 function getQuestion() {
 
-        const randomQuestion = Math.floor(Math.random() * moreQuestions.length)
+        randomQuestion = Math.floor(Math.random() * moreQuestions.length)
         nextQuestion = moreQuestions[randomQuestion]
         questionTitle.innerText= nextQuestion.question
 }
 
 function nextButton(){
     randomQuestion++;
-    nextQ();
+
+    getQuestion(randomQuestion)
+   
 }
 
-function nextQ() {
-    getQuestion(randomQuestion[nextQuestion])
-}
