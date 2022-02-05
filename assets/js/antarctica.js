@@ -157,9 +157,14 @@ function getQuestion() {
             const answerBtn = answer.dataset.option;
             answer.innerText = nextQuestion[answerBtn];
 
-        })
+            answerBtn.addEventListener('click', answerSelection)
 
-        
+
+        })
+}
+
+function answerSelection() {
+
 
 }
 
