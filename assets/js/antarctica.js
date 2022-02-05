@@ -172,11 +172,22 @@ function answerSelection(e) {
     const userAnswer = selectedOption.dataset.option;
     
 
+
     const result = userAnswer == nextQuestion.correctAnswer ? "correct" : "incorrect";
     selectedOption.parentElement.classList.add(result);
 
-    selectedOption.parentElement.classList.remove(result);
-    }
+    clearResult();
+
+}
+
+function clearResult() {
+    selectedOption.parentElement.classList.remove(
+        
+    );
+  
+}
+
+
     
 
 
