@@ -7,12 +7,14 @@ const rulesPage = document.getElementsByClassName("quiz-rules")
 const beginBtn = document.getElementsByClassName("begin-btn")
 
 //questions section
+const questionCount = document.getElementById("counter")
 const questions = document.getElementById("quiz-section")
 const questionTitle = document.getElementById("antarctica-questions")
 const nextBtn = document.getElementById("next-btn")
 const choiceBtn = document.getElementById("antarctica-answers")
 const choice = Array.from(document.querySelectorAll(".choice"))
 const choiceDiv = document.getElementsByClassName("choice-button")
+const userScore = document.getElementById("user-score")
 
 let score = 0;
 let count = 0;
@@ -149,6 +151,9 @@ getQuestion()
 }
 
 function getQuestion() {
+
+        count++;
+        questionCount.innerText = count;
 
         randomQuestion = Math.floor(Math.random() * moreQuestions.length)
         nextQuestion = moreQuestions[randomQuestion]
