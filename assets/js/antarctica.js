@@ -168,8 +168,17 @@ function getQuestion() {
 
 function answerSelection(e) {
 
-    console.log(e.target)
-}
+    const selectedOption = e.target;
+    const userAnswer = selectedOption.dataset.option;
+    
+
+    const result = userAnswer == nextQuestion.correctAnswer ? "correct" : "incorrect";
+    selectedOption.parentElement.classList.add(result);
+
+    selectedOption.parentElement.classList.remove(result);
+    }
+    
+
 
 function nextButton(){
     randomQuestion++;

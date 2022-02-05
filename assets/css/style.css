@@ -48,7 +48,7 @@ text-align: center;
 }
 
 .incorrect{
-color:red;
+background-color:red;
 }
 .weekly-quiz-heading{
     text-decoration: underline;
