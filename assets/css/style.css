@@ -12,6 +12,17 @@ body{
     width:100vw;
     box-sizing: border-box;
 }
+
+.choice-button{
+
+    height:60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #2A6673;
+    margin:20px;
+    border: 1px solid;
+}
 .slide{
 position: absolute;
 transform: translate(-50%, -50%);
@@ -32,7 +43,13 @@ text-align: center;
     color:#4437EE;
     font-style: italic;
 }
+.btn.correct{
+    background-color: green;
+}
 
+.btn.incorrect{
+color:red;
+}
 .weekly-quiz-heading{
     text-decoration: underline;
     color:#2A6673;

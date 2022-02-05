@@ -10,7 +10,8 @@ const beginBtn = document.getElementsByClassName("begin-btn")
 const questions = document.getElementById("quiz-section")
 const questionTitle = document.getElementById("antarctica-questions")
 const nextBtn = document.getElementById("next-btn")
-
+const choiceBtn = document.getElementById("antarctica-answers")
+const choice = Array.from(document.querySelectorAll(".choice"))
 
 let score = 0;
 let count = 0;
@@ -22,55 +23,60 @@ let randomQuestion;
 let antarcticaQuestions = [
     {
         question: "Which of these animals do you NOT get in Antarctica?",
-            a: "Penguins",
-            b: "Whales",
-            c: "Polar bears",
-            d: "Seals",
+        a: "Penguins" ,
+        b: "Whales" ,
+        c: "Polar bears" ,
+        d: "Seals",
+        
         correctAnswer: "c"
+
     },
     {
         question: "When did humans first SEE Antarctica?",
-            a: "500 B.C",
-            b: "1000 A.D",
-            c: "1520 A.D",
+         
+            a: "500 B.C" ,
+            b: "1000 A.D" ,
+            c: "1520 A.D" ,
             d: "1820 A.D",
         correctAnswer : "d"
     },
     {
          question: "All mammals in Antarctica have..",
-             a: "fur",
-             b: "blubber",
-             c: "fins",
-             d: "teeth",
+            a: "fur",
+            b: "blubber",
+            c: "fins" ,
+            d: "teeth" ,
+        
          correctAnswer : "b"
     },
     {
         question: "Antarctica is referred to as..",
-        a : "The frozen Desert",
-        b : "Research Haven",
-        c : "The Titanic",
-        d : "The iceberg",
-
+ 
+         a: "The frozen Desert" ,
+         b: "Research Haven" ,
+         c: "The Titanic" ,
+         d: "The iceberg" ,
+        
     correctAnswer: "a"
 },
 {
     question: "Antarctica is in the..",
-    
-        a : "Arctic Circle",
-        b : "South Pole",
-        c : "North Pole",
-        d : "Northern Hemisphere",
+
+    a: "Arctic Circle",
+    b: "South Pole",
+    c: "North Pole",
+    d: "Northern Hemisphere",
     
     correctAnswer: "b"
 },
 {
     question: "How much of the Earths fresh water is found in Antarctica?",
 
-        a: "50%",
-        b: "20%",
+        a: "50%" ,
+        b: "20%" ,
         c: "70%",
         d: "100%",
-    
+        
    correctAnswer: "70%"
 },
 {
@@ -80,40 +86,41 @@ let antarcticaQuestions = [
         b: "Soldiers",
         c: "Researchers",
         d: "Politicians",
-    
+
     correctAnswer:"c"
 },
 {
     question: "Which continent is Antarctica closest to?",
-    
-        a: "North America",
-        b: "Asia",
-        c: "Australia",
-        d: "Europe",
+     
+         a: "North America" ,
+       b: "Asia" ,
+        c: "Australia" ,
+         d: "Europe" ,
     
     correctAnswer: "c"
 },
 {
     question: "The world's longest glacier is found on Antarctica. What is it called?",
     
-        a: "Amundsen",
-        b: "Lambert",
-        c: "Beardmore",
-        d: "Scott",
+        a: "Amundsen" ,
+        b: "Lambert" ,
+       c: "Beardmore" ,
+        d: "Scott" ,
     
     correctAnswer: "b"
 },
 {
   question: "What research base is located at the South Pole?",
- 
-      a:"Vostok Research Base",
-      b:"Casey Research Base",
-      c:"Molodezhnaya Research Base",
-      d:"Amundsen-Scott Research Base",
-  
+   
+      a:"Vostok Research Base" ,
+      b:"Casey Research Base" ,
+      c:"Molodezhnaya Research Base" ,
+      d:"Amundsen-Scott Research Base" ,
+    
   correctAnswer:"d"
 }
 ]
+
 
 // start button
 startBtn.addEventListener('click', quizStart)
@@ -144,7 +151,16 @@ function getQuestion() {
 
         randomQuestion = Math.floor(Math.random() * moreQuestions.length)
         nextQuestion = moreQuestions[randomQuestion]
-        questionTitle.innerText= nextQuestion.question
+        questionTitle.innerText= nextQuestion.question;
+
+        choice.forEach(function (answer) { 
+            const answerBtn = answer.dataset.option;
+            answer.innerText = nextQuestion[answerBtn];
+
+        })
+
+        
+
 }
 
 function nextButton(){
