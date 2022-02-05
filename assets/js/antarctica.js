@@ -153,17 +153,18 @@ function getQuestion() {
         nextQuestion = moreQuestions[randomQuestion]
         questionTitle.innerText= nextQuestion.question;
 
+        moreQuestions.splice(randomQuestion, 1);
+
         choice.forEach(function (answer) { 
             const answerBtn = answer.dataset.option;
-            answer.innerText = nextQuestion[answerBtn];
-
-            answerBtn.addEventListener('click', answerSelection)
-
+            answer.innerText = nextQuestion[answerBtn]
 
         })
+        answerBtn.addEventListener('click', answerSelection)
 }
 
 function answerSelection() {
+    const selectedBtn = e.target
 
 
 }
