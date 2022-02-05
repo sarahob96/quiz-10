@@ -181,10 +181,21 @@ function answerSelection(e) {
     const result = userAnswer == nextQuestion.correctAnswer ? "correct" : "incorrect";
     selectedOption.parentElement.classList.add(result);
 
+    if (result === 'correct') {
+        increaseScore();
+    }
+
     clearResult();
 
 }
 
+
+function increaseScore() {
+score++;
+
+userScore.innerText= score;
+
+}
 function clearResult() {
     selectedOption.parentElement.classList.remove(
         
