@@ -43,11 +43,11 @@ text-align: center;
     color:#4437EE;
     font-style: italic;
 }
-.btn.correct{
+.correct{
     background-color: green;
 }
 
-.btn.incorrect{
+.incorrect{
 color:red;
 }
 .weekly-quiz-heading{

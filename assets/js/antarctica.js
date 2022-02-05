@@ -12,6 +12,7 @@ const questionTitle = document.getElementById("antarctica-questions")
 const nextBtn = document.getElementById("next-btn")
 const choiceBtn = document.getElementById("antarctica-answers")
 const choice = Array.from(document.querySelectorAll(".choice"))
+const choiceDiv = document.getElementsByClassName("choice-button")
 
 let score = 0;
 let count = 0;
@@ -158,15 +159,16 @@ function getQuestion() {
         choice.forEach(function (answer) { 
             const answerBtn = answer.dataset.option;
             answer.innerText = nextQuestion[answerBtn]
-
         })
-        answerBtn.addEventListener('click', answerSelection)
-}
+         choice.forEach(answer => {
+             answer.addEventListener('click', answerSelection)
+         })
+         }
+        
 
-function answerSelection() {
-    const selectedBtn = e.target
+function answerSelection(e) {
 
-
+    console.log(e.target)
 }
 
 function nextButton(){
