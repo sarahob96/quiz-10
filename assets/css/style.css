@@ -44,6 +44,58 @@ body{
     background-color: white;
     padding: 10px;
 }
+    
+#result-btn{
+    font-size: 20px;
+    border-radius: 25px;
+    background-color: white;
+    padding: 10px;
+    
+}
+
+.message{
+font-size: 30px;
+padding: 20px;
+
+}
+
+.final-score{
+font-size: 20px;
+width: 100;
+padding: 10px;
+}
+.result-footer{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    flex-direction: row;
+    
+}
+#your-score{
+font-size: 25px;
+font-weight: bolder;
+margin: 0 auto;
+}
+
+#reset{
+    font-size: 20px;
+    border-radius: 25px;
+    background-color: #4437EE;
+    padding: 10px;
+    color: white;
+    
+}
+
+
+#exit{
+    font-size: 20px;
+    border-radius: 25px;
+    background-color: #2A6673;
+    padding: 10px;
+    color: white;
+   
+}
 p.choice{
     
     height:100%;
