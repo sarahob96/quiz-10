@@ -312,6 +312,13 @@ a{
     background-image: url('../images/penguins-1.jpeg');
     background-size: cover ;
 }
+
+.harry-potter-section{
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../images/harry-potter-1.jpeg');
+    background-size: cover;
+}
 footer{
     
     bottom: 0px;
