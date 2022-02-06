@@ -1,32 +1,32 @@
 //start section
-const startBtn = document.getElementById("start-btn")
-const startPage = document.getElementById("start-page")
+const startBtn = document.getElementById("start-btn-hp")
+const startPage = document.getElementById("start-page-hp")
 
 //rules section
-const rulesPage = document.getElementById("quiz-rules")
-const beginBtn = document.getElementById("begin")
+const rulesPage = document.getElementById("quiz-rules-hp")
+const beginBtn = document.getElementById("begin-hp")
 
 //questions section
-const questionCount = document.getElementById("counter")
-const questions = document.getElementById("quiz-section")
-const questionTitle = document.getElementById("antarctica-questions")
-const nextBtn = document.getElementById("next-btn")
-const choiceBtn = document.getElementById("antarctica-answers")
+const questionCount = document.getElementById("counter-hp")
+const questions = document.getElementById("quiz-section-hp")
+const questionTitle = document.getElementById("harryquestions")
+const nextBtn = document.getElementById("next-btn-hp")
+const choiceBtn = document.getElementById("harry-answers")
 const choice = Array.from(document.querySelectorAll(".choice"))
 const choiceDiv = document.getElementsByClassName("choice-button")
-const userScore = document.getElementById("user-score")
-const choice1 = document.getElementById('choice1')
-const choice2 = document.getElementById('choice2')
-const choice3 = document.getElementById('choice3')
-const choice4 = document.getElementById('choice4')
+const userScore = document.getElementById("user-score-hp")
+const choice1 = document.getElementById('choice-1')
+const choice2 = document.getElementById('choice-2')
+const choice3 = document.getElementById('choice-3')
+const choice4 = document.getElementById('choice-4')
 
 //results section
 
-const resultBtn = document.getElementById("result-btn")
-const resultSection = document.getElementById("results-container")
-const resetBtn = document.getElementById("reset")
-const exitBtn = document.getElementById('exit')
-const yourScore = document.getElementById('your-score')
+const resultBtn = document.getElementById("result-btn-hp")
+const resultSection = document.getElementById("results-container-hp")
+const resetBtn = document.getElementById("reset-hp")
+const exitBtn = document.getElementById('exit-hp')
+const yourScore = document.getElementById('your-score-hp')
 
 
 
@@ -143,7 +143,7 @@ exitBtn.addEventListener('click', returnHome)
 function quizStart() {
 startBtn.classList.add('hide')
 startPage.classList.add('hide')
-questions.classList.add('hide')
+harryquestions.classList.add('hide')
 resultBtn.classList.add('hide')
 nextBtn.classList.add('hide')
 rulesPage.classList.remove('hide')
@@ -161,7 +161,7 @@ questions.classList.remove('hide')
 score = 0;
 count = 0;
 randomQuestion = 0;
-moreQuestions = [...antarcticaQuestions]
+moreQuestions = [...harryPotterQuestions]
 getQuestion()
 }
 
