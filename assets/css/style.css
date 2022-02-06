@@ -28,6 +28,10 @@ p.choice{
     
     height:60%;
     width:100%;
+    
+}
+p.choice:hover{
+    cursor: pointer;
 }
 .slide{
 position: absolute;
