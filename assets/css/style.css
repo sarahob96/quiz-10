@@ -20,10 +20,30 @@ body{
     flex-direction: row;
     align-items: center;
     background-color: #2A6673;
-    margin:20px;
+    margin:10px;
     border: 1px solid;
+    color:white;
+    opacity: 1px;
+    font-size: 30px;
+    text-align: center;
+  
 }
 
+#score{
+    border: 1px solid;
+    border-radius: 20px;
+    font-size:20px;
+    font-weight: bolder;
+    width: 20%;
+    padding: 10px;
+}
+
+#next-btn{
+    font-size: 20px;
+    border-radius: 25px;
+    background-color: white;
+    padding: 10px;
+}
 p.choice{
     
     height:100%;
@@ -33,6 +53,7 @@ p.choice{
 p.choice:hover{
     cursor: pointer;
 }
+
 .slide{
 position: absolute;
 transform: translate(-50%, -50%);
@@ -40,6 +61,10 @@ width:50%;
 top: 50%;
 left:50%;
 text-align: center;
+background-color:#B0CBD2;
+border: 1px solid;
+border-radius: 25px;
+padding: 30px;
 }
 .main-heading{
     color:#4437EE;
@@ -96,8 +121,47 @@ background-color:red;
 }
 /* weekly-quiz section*/
 
+.start-heading{
+letter-spacing: 1px;
+font-weight: bolder;
+font-size: 40px;
+padding: 20px;
+
+}
+
+.start-paragraph{
+letter-spacing: 0.5px;
+font-size: large;
+font-size: 25px;
+}
+
+button.btn:hover{
+    cursor: pointer;
+}
+
+#start-btn{ 
+
+margin: 35px;
+font-size: 30px;
+padding:10px;
+border-radius: 20px;
+background-color: white;
+width: 30%;
+    
+}
+
+.rules-heading{
+    font-size: 30px;
+    letter-spacing: 2px;
+    padding: 10px;
 
 
+}
+
+.text{
+    font-size: 20px;
+    
+}
 .weekly-quiz{
    
     height: 500px;
@@ -111,6 +175,27 @@ background-color:red;
     margin: 0 auto;
     overflow: hidden;
   
+}
+.antarctica-title{
+font-size: 30px;;
+padding-bottom: 0;
+}
+.quiz-count{
+font-size: 20px;
+padding-top: 0;
+padding-bottom: 10px;
+
+}
+#antarctica-questions{
+font-size: 30px;
+}
+
+
+.begin-btn{
+    font-size: 20px;
+    margin: 20px;
+    border-radius: 25px;
+    padding: 20px;
 }
 .iceberg-image{
 
@@ -151,6 +236,9 @@ background-color:red;
 
 .antarctica-section{
     height: 100vh;
+    width: 100vw;
+    background-image: url('../images/penguins-1.jpeg');
+    background-size: cover ;
 }
 footer{
     

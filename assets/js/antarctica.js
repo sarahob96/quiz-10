@@ -205,8 +205,6 @@ function getQuestion() {
          choice.forEach(answer => {
              answer.addEventListener('click', answerSelection)
          })
-
-        
          }
         
 
@@ -220,6 +218,7 @@ function answerSelection(e) {
     const result = userAnswer == nextQuestion.correctAnswer ? "correct" : "incorrect";
     selectedOption.parentElement.classList.add(result);
     
+    
 
     if (result === 'correct') {
         increaseScore();
@@ -229,7 +228,8 @@ function answerSelection(e) {
          nextBtn.classList.add('hide')
          resultBtn.classList.remove('hide')
      }
-}
+
+} 
 
 
 function increaseScore() {
