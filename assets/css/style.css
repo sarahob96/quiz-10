@@ -7,7 +7,7 @@
 body{
 
     font-family: Darker Grotesque;
-    background-color: #B0CBD2;
+    background-color: #349db3;
     height:100vh; 
     width:100vw;
     box-sizing: border-box;
@@ -119,16 +119,18 @@ border-radius: 25px;
 padding: 30px;
 }
 .main-heading{
-    color:#4437EE;
-    text-align: center;
-    font-size: 280%;
+    color: white;
+    font-size: 70px;
     letter-spacing: 2px;
+    padding: 20px 20px 5px 20px;
+
     
 }
 .tag-line{
-    text-align: center;
-    color:#4437EE;
-    font-style: italic;
+    padding: 0px 20px 10px 20px;
+    color: white;
+    font-weight: bolder;
+    font-size: 30px;
 }
 .correct{
     background-color: green;
@@ -138,12 +140,15 @@ padding: 30px;
 background-color:red;
 }
 .weekly-quiz-heading{
-    text-decoration: underline;
+    
+    background-color: white;
     color:#2A6673;
     letter-spacing: 2px;
-    font-size: 150%;
+    font-size: 160%;
     text-align: center;
-    padding-top: 40px;
+    padding: 20px;
+    margin-top: 50px;
+
        
 }
 
@@ -218,7 +223,8 @@ width: 30%;
    
     height: 500px;
     width:100%;
-    padding-top: 90px;
+    padding-top: 10px;
+    position: relative;
 }
 .antarctica-quiz{
     height:450px;
@@ -241,7 +247,18 @@ padding-bottom: 10px;
 #antarctica-questions{
 font-size: 30px;
 }
+.image-text{
 
+    font-size: 50px;
+   text-align: center;
+   color:white;
+   
+}
+a{
+    text-decoration: none;
+    color:white;
+    
+}
 
 .begin-btn{
     font-size: 20px;
@@ -251,10 +268,12 @@ font-size: 30px;
 }
 .iceberg-image{
 
+   border-radius: 25px;
    max-height:100%;
    width:80%;
    
 }
+
 
 .last-quiz{
 
@@ -274,6 +293,7 @@ font-size: 30px;
 .harry-potter-image{
     max-height: 100%;
     width:80%;
+    border-radius: 25px;
 }
 .harry-potter-background{
     height:100vh;
