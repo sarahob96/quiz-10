@@ -350,3 +350,9 @@ footer{
     padding: 30px;
     color: #F4F4E8;
 }
+.copyright{
+    text-align: center;
+    color: white;
+    font-size: larger;
+    padding-bottom: 10px;
+}
