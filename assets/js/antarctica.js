@@ -22,6 +22,7 @@ const resultBtn = document.getElementById("result-btn")
 const resultSection = document.getElementById("results-container")
 const resetBtn = document.getElementById("reset")
 const exitBtn = document.getElementById('exit')
+const yourScore = document.getElementById('your-score')
 
 
 let score = 0;
@@ -155,7 +156,7 @@ questions.classList.remove('hide')
 resultBtn.classList.add('hide')
 nextBtn.classList.remove('hide')
 resultSection.classList.add('hide')
-
+userScore.innerText = 0;
 beginQuiz();
 }
 
@@ -240,7 +241,7 @@ function nextButton(){
 function finalResult(){ 
 resultSection.classList.remove('hide')
 questions.classList.add('hide')
-
+yourScore.innerText = score
 
 }
 
