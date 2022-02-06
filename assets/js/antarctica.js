@@ -16,6 +16,14 @@ const choice = Array.from(document.querySelectorAll(".choice"))
 const choiceDiv = document.getElementsByClassName("choice-button")
 const userScore = document.getElementById("user-score")
 
+
+//results section
+const resultBtn = document.getElementById("result-btn")
+const resultSection = document.getElementById("results-container")
+const resetBtn = document.getElementById("reset")
+const exitBtn = document.getElementById('exit')
+
+
 let score = 0;
 let count = 0;
 let moreQuestions = [];
@@ -80,7 +88,7 @@ let antarcticaQuestions = [
         c: "70%",
         d: "100%",
         
-   correctAnswer: "70%"
+   correctAnswer: "c"
 },
 {
     question: "Who are the only people to LIVE in Antarctica (on a temporary basis)?",
@@ -131,12 +139,23 @@ startBtn.addEventListener('click', quizStart)
 // next button
 nextBtn.addEventListener('click', nextButton)
 
+//result button
+resultBtn.addEventListener('click', finalResult)
 
+//reset button
+resetBtn.addEventListener('click', quizStart)
+
+//exit button
+exitBtn.addEventListener('click', returnHome)
 
 function quizStart() {
 startBtn.classList.add('hide')
 startPage.classList.add('hide')
 questions.classList.remove('hide')
+resultBtn.classList.add('hide')
+nextBtn.classList.remove('hide')
+resultSection.classList.add('hide')
+
 beginQuiz();
 }
 
@@ -155,6 +174,12 @@ function getQuestion() {
         count++;
         questionCount.innerText = count;
 
+        if (count >= 10) {
+            nextBtn.classList.add('hide')
+            resultBtn.classList.remove('hide')
+        }
+
+
         randomQuestion = Math.floor(Math.random() * moreQuestions.length)
         nextQuestion = moreQuestions[randomQuestion]
         questionTitle.innerText= nextQuestion.question;
@@ -168,6 +193,8 @@ function getQuestion() {
          choice.forEach(answer => {
              answer.addEventListener('click', answerSelection)
          })
+
+        
          }
         
 
@@ -210,3 +237,13 @@ function nextButton(){
    
 }
 
+function finalResult(){ 
+resultSection.classList.remove('hide')
+questions.classList.add('hide')
+
+
+}
+
+function returnHome(){
+    location.href = "index.html"
+}
