@@ -203,10 +203,6 @@ function clearResult() {
   
 }
 
-
-    
-
-
 function nextButton(){
     randomQuestion++;
 
