@@ -154,9 +154,9 @@ background-color:red;
 
 .about-heading{
     text-decoration: underline;
-    color:#2A6673;
+    color: white;
     letter-spacing: 2px;
-    font-size: 150%;
+    font-size: 40px;
     text-align: center;
 
 
@@ -165,7 +165,7 @@ background-color:red;
     text-align: center;
     padding: 20px;
     font-weight: bolder;
-    font-size: larger;
+    font-size: 30px;
 }
 .last-quiz-heading{
     text-decoration: underline;
@@ -221,7 +221,7 @@ width: 30%;
 }
 .weekly-quiz{
    
-    height: 500px;
+    height: 550px;
     width:100%;
     padding-top: 10px;
     position: relative;
@@ -339,3 +339,14 @@ footer{
 
 }
 
+.socials > li {
+    display: inline;
+}
+.socials {
+    text-align: center;
+}
+.socials i {
+    font-size: 30px;
+    padding: 30px;
+    color: #F4F4E8;
+}
