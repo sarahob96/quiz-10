@@ -3,8 +3,8 @@ const startBtn = document.getElementById("start-btn")
 const startPage = document.getElementById("start-page")
 
 //rules section
-const rulesPage = document.getElementsByClassName("quiz-rules")
-const beginBtn = document.getElementsByClassName("begin-btn")
+const rulesPage = document.getElementById("quiz-rules")
+const beginBtn = document.getElementById("begin")
 
 //questions section
 const questionCount = document.getElementById("counter")
@@ -18,11 +18,13 @@ const userScore = document.getElementById("user-score")
 
 
 //results section
+
 const resultBtn = document.getElementById("result-btn")
 const resultSection = document.getElementById("results-container")
 const resetBtn = document.getElementById("reset")
 const exitBtn = document.getElementById('exit')
 const yourScore = document.getElementById('your-score')
+
 
 
 let score = 0;
@@ -135,7 +137,10 @@ let antarcticaQuestions = [
 
 
 // start button
-startBtn.addEventListener('click', quizStart)
+startBtn.addEventListener('click', quizStart) 
+
+//begin button
+beginBtn.addEventListener('click', beginQuiz)
 
 // next button
 nextBtn.addEventListener('click', nextButton)
@@ -152,16 +157,20 @@ exitBtn.addEventListener('click', returnHome)
 function quizStart() {
 startBtn.classList.add('hide')
 startPage.classList.add('hide')
-questions.classList.remove('hide')
+questions.classList.add('hide')
 resultBtn.classList.add('hide')
-nextBtn.classList.remove('hide')
+nextBtn.classList.add('hide')
+rulesPage.classList.remove('hide')
 resultSection.classList.add('hide')
 userScore.innerText = 0;
-beginQuiz();
+
 }
 
 
 function beginQuiz() {
+
+rulesPage.classList.add('hide')
+questions.classList.remove('hide')
 
 score = 0;
 count = 0;
@@ -172,12 +181,12 @@ getQuestion()
 
 function getQuestion() {
 
+        nextBtn.classList.add('hide')
         count++;
         questionCount.innerText = count;
 
         if (count >= 10) {
             nextBtn.classList.add('hide')
-            resultBtn.classList.remove('hide')
         }
 
 
@@ -205,16 +214,18 @@ function answerSelection(e) {
     const userAnswer = selectedOption.dataset.option;
     
 
-
+//code adapted from 
     const result = userAnswer == nextQuestion.correctAnswer ? "correct" : "incorrect";
     selectedOption.parentElement.classList.add(result);
 
     if (result === 'correct') {
         increaseScore();
     }
-
-    clearResult();
-
+     nextBtn.classList.remove('hide')
+     if (count >=10){
+         nextBtn.classList.add('hide')
+         resultBtn.classList.remove('hide')
+     }
 }
 
 
@@ -224,15 +235,14 @@ score++;
 userScore.innerText= score;
 
 }
-function clearResult() {
-    selectedOption.parentElement.classList.remove(
-        
-    );
-  
-}
+
 
 function nextButton(){
     randomQuestion++;
+choiceBtn.classList.remove('correct')
+choiceBtn.classList.remove('incorrect')
+
+
 
     getQuestion(randomQuestion)
    
