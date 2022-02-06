@@ -15,7 +15,10 @@ const choiceBtn = document.getElementById("antarctica-answers")
 const choice = Array.from(document.querySelectorAll(".choice"))
 const choiceDiv = document.getElementsByClassName("choice-button")
 const userScore = document.getElementById("user-score")
-
+const choice1 = document.getElementById('choice1')
+const choice2 = document.getElementById('choice2')
+const choice3 = document.getElementById('choice3')
+const choice4 = document.getElementById('choice4')
 
 //results section
 
@@ -189,7 +192,6 @@ function getQuestion() {
             nextBtn.classList.add('hide')
         }
 
-
         randomQuestion = Math.floor(Math.random() * moreQuestions.length)
         nextQuestion = moreQuestions[randomQuestion]
         questionTitle.innerText= nextQuestion.question;
@@ -217,6 +219,7 @@ function answerSelection(e) {
 //code adapted from 
     const result = userAnswer == nextQuestion.correctAnswer ? "correct" : "incorrect";
     selectedOption.parentElement.classList.add(result);
+    
 
     if (result === 'correct') {
         increaseScore();
@@ -238,15 +241,21 @@ userScore.innerText= score;
 
 
 function nextButton(){
+
     randomQuestion++;
-choiceBtn.classList.remove('correct')
-choiceBtn.classList.remove('incorrect')
-
-
 
     getQuestion(randomQuestion)
    
+    choice1.classList.remove('incorrect')
+    choice2.classList.remove('incorrect')
+    choice3.classList.remove('incorrect')
+    choice4.classList.remove('incorrect')
+    choice1.classList.remove('correct')
+    choice2.classList.remove('correct')
+    choice3.classList.remove('correct')
+    choice4.classList.remove('correct')
 }
+
 
 function finalResult(){ 
 resultSection.classList.remove('hide')
