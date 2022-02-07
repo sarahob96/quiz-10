@@ -27,7 +27,7 @@ const resultSection = document.getElementById("results-container-hp")
 const resetBtn = document.getElementById("reset-hp")
 const exitBtn = document.getElementById('exit-hp')
 const yourScore = document.getElementById('your-score-hp')
-
+const scoreMessage = document.getElementById('score-message-hp')
 
 
 let score = 0;
@@ -263,6 +263,19 @@ function finalResult(){
 resultSection.classList.remove('hide')
 questions.classList.add('hide')
 yourScore.innerText = score
+
+if (score <=10) {
+    scoreMessage.innerText= ` You're a WIZARD!`
+}
+if (score <=8) {
+    scoreMessage.innerText= ` Nearly as smart as Hermione.... `
+
+if (score <=6) {
+    scoreMessage.innerText= ` Not quite Gryfinndor standards`
+}
+}if (score <=3) {
+    scoreMessage.innertext= `You must be a muggle.... try again!`
+}
 
 }
 
