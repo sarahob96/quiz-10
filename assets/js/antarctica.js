@@ -236,7 +236,7 @@ function answerSelection(e) {
   
      nextBtn.classList.remove('hide')
 
-     
+
      if (count >=10){
          nextBtn.classList.add('hide')
          resultBtn.classList.remove('hide')
@@ -275,16 +275,16 @@ resultSection.classList.remove('hide')
 questions.classList.add('hide')
 yourScore.innerText = score
 
-if (score <=10) {
+if (score <= 10) {
     scoreMessage.innerText= ` ICE champion.. You're an expert!`
 }
-if (score <=8) {
+if (score <= 8) {
     scoreMessage.innerText= ` SnOw Close!!  `
 
-if (score <=6) {
+if (score <= 6) {
     scoreMessage.innerText= `N-ICE try!`
 }
-}if (score <=3) {
+}if (score <= 3) {
     scoreMessage.innertext= `Brrrrrrr.. better luck next time!`
 }
 
