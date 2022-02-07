@@ -36,7 +36,7 @@ let moreQuestions = [];
 let nextQuestion = {};
 let maximumQuestions = 10;
 let randomQuestion;
-let buttonClicked = false;
+
 
 
 let harryPotterQuestions = [

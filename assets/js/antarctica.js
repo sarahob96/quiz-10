@@ -27,6 +27,7 @@ const resultSection = document.getElementById("results-container")
 const resetBtn = document.getElementById("reset")
 const exitBtn = document.getElementById('exit')
 const yourScore = document.getElementById('your-score')
+const scoreMessage = document.getElementById("score-message")
 
 
 
@@ -167,6 +168,14 @@ rulesPage.classList.remove('hide')
 resultSection.classList.add('hide')
 userScore.innerText = 0;
 
+choice1.classList.remove('incorrect')
+choice2.classList.remove('incorrect')
+choice3.classList.remove('incorrect')
+choice4.classList.remove('incorrect')
+choice1.classList.remove('correct')
+choice2.classList.remove('correct')
+choice3.classList.remove('correct')
+choice4.classList.remove('correct')
 }
 
 
@@ -261,6 +270,20 @@ function finalResult(){
 resultSection.classList.remove('hide')
 questions.classList.add('hide')
 yourScore.innerText = score
+
+if (score <=10) {
+    scoreMessage.innerText= ` ICE champion.. You're an expert!`
+}
+if (score <=8) {
+    scoreMessage.innerText= ` SnOw Close!!  `
+
+if (score <=6) {
+    scoreMessage.innerText= `N-ICE try!`
+}
+}if (score <=3) {
+    scoreMessage.innertext= `Brrrrrrr.. better luck next time!`
+}
+
 
 }
 

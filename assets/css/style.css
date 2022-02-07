@@ -68,6 +68,13 @@ body{
     padding: 10px;
     
 }
+.header-photo{
+    float:right;
+    width:10%;
+    top:20px;
+    right:30px;
+    position:absolute;
+}
 
 .message{
 font-size: 30px;
@@ -145,7 +152,7 @@ margin: 0 auto;
 #exit{
     font-size: 20px;
     border-radius: 25px;
-    background-color: #2A6673;
+    background-color: #349db3;
     padding: 10px;
     color: white;
    
