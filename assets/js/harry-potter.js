@@ -36,6 +36,8 @@ let moreQuestions = [];
 let nextQuestion = {};
 let maximumQuestions = 10;
 let randomQuestion;
+let buttonClicked = false;
+
 
 let harryPotterQuestions = [
     {
@@ -150,6 +152,16 @@ rulesPage.classList.remove('hide')
 resultSection.classList.add('hide')
 userScore.innerText = 0;
 
+
+choice1.classList.remove('incorrect')
+choice2.classList.remove('incorrect')
+choice3.classList.remove('incorrect')
+choice4.classList.remove('incorrect')
+choice1.classList.remove('correct')
+choice2.classList.remove('correct')
+choice3.classList.remove('correct')
+choice4.classList.remove('correct')
+
 }
 
 
@@ -184,15 +196,19 @@ function getQuestion() {
         choice.forEach(function (answer) { 
             const answerBtn = answer.dataset.option;
             answer.innerText = nextQuestion[answerBtn]
-        })
+        
+    });
+         
+};
          choice.forEach(answer => {
              answer.addEventListener('click', answerSelection)
+        
          })
-         }
+         
         
 
 function answerSelection(e) {
-
+  
     const selectedOption = e.target;
     const userAnswer = selectedOption.dataset.option;
     
@@ -200,17 +216,20 @@ function answerSelection(e) {
 //code adapted from 
     const result = userAnswer == nextQuestion.correctAnswer ? "correct" : "incorrect";
     selectedOption.parentElement.classList.add(result);
-    
+   
     
 
     if (result === 'correct') {
         increaseScore();
     }
+
+    
      nextBtn.classList.remove('hide')
      if (count >=10){
          nextBtn.classList.add('hide')
          resultBtn.classList.remove('hide')
      }
+   
 
 } 
 

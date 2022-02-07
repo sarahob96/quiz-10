@@ -47,7 +47,20 @@ body{
     background-color: white;
     padding: 10px;
 }
-    
+
+#next-btn-hp{
+    font-size: 20px;
+    border-radius: 25px;
+    background-color: white;
+    padding: 10px;
+}
+
+#result-btn-hp{
+    font-size: 20px;
+    border-radius: 25px;
+    background-color: white;
+    padding: 10px;
+}
 #result-btn{
     font-size: 20px;
     border-radius: 25px;
@@ -61,11 +74,24 @@ font-size: 30px;
 padding: 20px;
 
 }
+.message-hp{
+font-size: 30px;
+padding: 20px;
+color:white;
+
+}
 
 .final-score{
 font-size: 20px;
 width: 100;
 padding: 10px;
+}
+
+.final-score-hp{
+font-size: 20px;
+width: 100;
+padding: 10px;
+color:white;
 }
 .result-footer{
     margin: 20px;
@@ -81,6 +107,15 @@ font-weight: bolder;
 margin: 0 auto;
 }
 
+#score-hp{
+    border: 1px solid;
+    border-radius: 20px;
+    font-size:20px;
+    font-weight: bolder;
+    width: 20%;
+    padding: 10px;
+}
+
 #reset{
     font-size: 20px;
     border-radius: 25px;
@@ -90,7 +125,23 @@ margin: 0 auto;
     
 }
 
+#reset-hp{
+    font-size: 20px;
+    border-radius: 25px;
+    background-color: #6c66be;
+    padding: 10px;
+    color: white;
+    
+}
 
+#exit-hp{
+    font-size: 20px;
+    border-radius: 25px;
+    background-color: #349db3;
+    padding: 10px;
+    color: white;
+
+}
 #exit{
     font-size: 20px;
     border-radius: 25px;
@@ -99,6 +150,7 @@ margin: 0 auto;
     color: white;
    
 }
+
 p.choice{
     
     height:100%;
