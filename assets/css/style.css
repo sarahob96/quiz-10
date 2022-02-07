@@ -118,6 +118,18 @@ border: 1px solid;
 border-radius: 25px;
 padding: 30px;
 }
+.slide-hp{
+position: absolute;
+transform: translate(-50%, -50%);
+width:50%;
+top: 50%;
+left:50%;
+text-align: center;
+background-color: #4437EE;
+border: 1px solid;
+border-radius: 25px;
+padding: 30px;
+}
 .main-heading{
     color: white;
     font-size: 70px;
@@ -316,7 +328,7 @@ a{
 .harry-potter-section{
     height: 100vh;
     width: 100vw;
-    background-image: url('../images/harry-potter-1.jpeg');
+    background-image: url('../images/harry-image.jpeg');
     background-size: cover;
 }
 footer{
