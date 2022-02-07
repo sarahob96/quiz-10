@@ -70,7 +70,7 @@ body{
 }
 .header-photo{
     float:right;
-    width:10%;
+    height: 200px;
     top:20px;
     right:30px;
     position:absolute;
