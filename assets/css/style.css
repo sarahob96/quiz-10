@@ -28,6 +28,9 @@ body{
     text-align: center;
   
 }
+.choice-hp{
+    background-color: #6c66be;
+}
 
 #score{
     border: 1px solid;
@@ -106,6 +109,8 @@ p.choice:hover{
     cursor: pointer;
 }
 
+
+
 .slide{
 position: absolute;
 transform: translate(-50%, -50%);
@@ -113,7 +118,7 @@ width:50%;
 top: 50%;
 left:50%;
 text-align: center;
-background-color:#B0CBD2;
+background-color:#acd9e4;
 border: 1px solid;
 border-radius: 25px;
 padding: 30px;
@@ -125,7 +130,7 @@ width:50%;
 top: 50%;
 left:50%;
 text-align: center;
-background-color: #4437EE;
+background-color: #423ba1;
 border: 1px solid;
 border-radius: 25px;
 padding: 30px;
@@ -191,11 +196,21 @@ background-color:red;
 /* weekly-quiz section*/
 
 .start-heading{
-letter-spacing: 1px;
+letter-spacing: 2px;
 font-weight: bolder;
 font-size: 40px;
 padding: 20px;
+color: white;
+text-shadow: 2px 2px black;
 
+}
+.start-heading-hp{
+    color:white;
+    font-size: 40px;
+    padding: 20px;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    text-shadow: 2px 2px black;
 }
 
 .start-paragraph{
@@ -207,11 +222,18 @@ font-size: 25px;
 button.btn:hover{
     cursor: pointer;
 }
-
+#start-btn-hp{
+margin: 30px;
+font-size: 25px;
+padding:10px;
+border-radius: 20px;
+background-color: white;
+width: 30%;
+}
 #start-btn{ 
 
-margin: 35px;
-font-size: 30px;
+margin: 30px;
+font-size: 25px;
 padding:10px;
 border-radius: 20px;
 background-color: white;
@@ -224,11 +246,17 @@ width: 30%;
     letter-spacing: 2px;
     padding: 10px;
 
-
+}
+.rules-heading-hp{
+    font-size: 30px;
+    letter-spacing: 2px;
+    padding: 10px;
+    color: white;
 }
 
 .text{
     font-size: 20px;
+    font-weight: bolder;
     
 }
 .weekly-quiz{
@@ -246,8 +274,13 @@ width: 30%;
     overflow: hidden;
   
 }
+.harry-title{
+font-size: 30px;
+padding-bottom: 0;
+color:white
+}
 .antarctica-title{
-font-size: 30px;;
+font-size: 30px;
 padding-bottom: 0;
 }
 .quiz-count{
@@ -258,6 +291,11 @@ padding-bottom: 10px;
 }
 #antarctica-questions{
 font-size: 30px;
+}
+
+#harry-questions{
+    font-size: 30px;
+    color: white;
 }
 .image-text{
 
@@ -276,7 +314,7 @@ a{
     font-size: 20px;
     margin: 20px;
     border-radius: 25px;
-    padding: 20px;
+    padding: 10px;
 }
 .iceberg-image{
 
