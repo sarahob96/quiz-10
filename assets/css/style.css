@@ -132,6 +132,19 @@ margin: 0 auto;
     right: 30px;
     background-color: white;
 }
+#score{
+    border: 1px solid;
+    border-radius: 20px;
+    font-size:20px;
+    font-weight: bolder;
+    width: 20%;
+    padding: 10px;
+    float:right;
+    position:absolute;
+    top: 30px;
+    right: 30px;
+    background-color: white;
+}
 .count-container{
     float: left;
     position: absolute;
@@ -143,7 +156,7 @@ margin: 0 auto;
     width:20%;
     padding: 10px;
     font-size: 20px;
-    background-color: #6c66be;
+    background-color: white;
 }
 
 #reset{
