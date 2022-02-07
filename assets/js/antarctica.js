@@ -19,6 +19,7 @@ const choice1 = document.getElementById('choice1')
 const choice2 = document.getElementById('choice2')
 const choice3 = document.getElementById('choice3')
 const choice4 = document.getElementById('choice4')
+const correctOption = document.getElementById('quiz-footer')
 
 //results section
 
@@ -232,7 +233,10 @@ function answerSelection(e) {
     if (result === 'correct') {
         increaseScore();
     }
+  
      nextBtn.classList.remove('hide')
+
+     
      if (count >=10){
          nextBtn.classList.add('hide')
          resultBtn.classList.remove('hide')
