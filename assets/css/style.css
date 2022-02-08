@@ -568,5 +568,101 @@ font-size: 35px;
    .harry-potter-quiz{
        width:100%;
    }
+
+   .slide{
+    width: 85%;
+    padding: 0;
+   }
+   .slide-hp{
+    width: 85%;
+    padding: 0;
+
+   }
+
+   .start-heading{
+       letter-spacing: 0;
+       font-size: 35px;
+   }
+
+   .start-paragraph{
+       font-size: 20px;
+   }
+   #start-btn{
+       font-size: 25px;
+   }
+
+   .text{
+       font-size: 15px;
+   }
+   .begin-btn{
+       font-size: 15px;
+   }
+   .choice-button{
+       height: 50px;
+   }
+
+   #antarctica-answers{
+       padding: 20px;
+   }
+
+   #antarctica-questions{
+       font-size:25px;
+       padding: 10px;
+   }
+
+#harry-answers{
+    padding:20px;
 }
+
+#harry-questions{
+    font-size:25px;
+       padding: 10px;
+}
+   #score{
+       font-size: 10px;
+       top: 37px;
+       right: 15px;
+   }
+
+   #score-hp{
+    font-size: 10px;
+    top: 37px;
+    right: 15px;
+}
+   .count-container{
+       font-size: 10px;
+       top: 37px;
+       left: 15px;
+   }
+   #next-btn{
+       font-size: 15px;
+       margin:10px;
+   }
+
+   #next-btn-hp{
+    font-size: 15px;
+    margin:10px;
+
+   }
+   #result-btn{
+    font-size: 15px;
+    margin:10px;
+   }
+   p.choice{
+       font-size: 18px;
+   }
+   #reset{
+       font-size: 13px;
+   }
+   #reset-hp{
+       font-size:13px;
+   }
+  #exit{
+font-size: 13px;
+    }
+    #exit-hp{
+        font-size: 13px;
+    }
+   }
+
     
