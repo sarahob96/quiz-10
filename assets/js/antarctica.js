@@ -20,6 +20,7 @@ const choice2 = document.getElementById('choice2')
 const choice3 = document.getElementById('choice3')
 const choice4 = document.getElementById('choice4')
 const correctOption = document.getElementById('correct-option')
+const correctOptionContainer = document.getElementById('correct-option-container')
 
 //results section
 
@@ -212,11 +213,10 @@ function getQuestion() {
 
         choice.forEach(function (answer) { 
             const answerBtn = answer.dataset.option;
-            answer.innerText = nextQuestion[answerBtn]
+            answer.innerText = nextQuestion[answerBtn] 
+            answer.addEventListener('click', answerSelection)
         })
-         choice.forEach(answer => {
-             answer.addEventListener('click', answerSelection)
-         })
+           
          }
         
 
@@ -240,6 +240,11 @@ function answerSelection(e) {
         increaseScore();
         
     }
+    else {
+        correctOptionContainer.classList.remove('hide')
+        correctOption.innerText = nextQuestion.correctAnswer
+    }
+
    nextBtn.classList.remove('hide')
 
      if (count >=10){
@@ -264,6 +269,7 @@ function nextButton(){
 
     getQuestion(randomQuestion)
    
+    correctOptionContainer.classList.add('hide')
     choice1.classList.remove('incorrect')
     choice2.classList.remove('incorrect')
     choice3.classList.remove('incorrect')

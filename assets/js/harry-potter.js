@@ -36,6 +36,7 @@ let moreQuestions = [];
 let nextQuestion = {};
 let maximumQuestions = 10;
 let randomQuestion;
+let answerChosen = false;
 
 
 
@@ -192,32 +193,30 @@ function getQuestion() {
         questionTitle.innerText= nextQuestion.question;
 
         moreQuestions.splice(randomQuestion, 1);
+        answerChosen = true;
 
         choice.forEach(function (answer) { 
             const answerBtn = answer.dataset.option;
             answer.innerText = nextQuestion[answerBtn]
-        
+         answer.addEventListener('click', answerSelection)
+
     });
          
 };
-         choice.forEach(answer => {
-             answer.addEventListener('click', answerSelection)
-        
-         })
-         
-        
+          
 
 function answerSelection(e) {
   
+    if (answerChosen === false) return;
+
+    answerChosen = false; 
+
     const selectedOption = e.target;
     const userAnswer = selectedOption.dataset.option;
     
-
-//code adapted from 
     const result = userAnswer == nextQuestion.correctAnswer ? "correct" : "incorrect";
     selectedOption.parentElement.classList.add(result);
    
-    
 
     if (result === 'correct') {
         increaseScore();
