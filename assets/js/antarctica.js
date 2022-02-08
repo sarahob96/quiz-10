@@ -19,7 +19,7 @@ const choice1 = document.getElementById('choice1')
 const choice2 = document.getElementById('choice2')
 const choice3 = document.getElementById('choice3')
 const choice4 = document.getElementById('choice4')
-const correctOption = document.getElementById('quiz-footer')
+const correctOption = document.getElementById('correct-option')
 
 //results section
 
@@ -38,6 +38,7 @@ let moreQuestions = [];
 let nextQuestion = {};
 let maximumQuestions = 10;
 let randomQuestion;
+let answerChosen = false;
 
 let antarcticaQuestions = [
     {
@@ -207,6 +208,7 @@ function getQuestion() {
         questionTitle.innerText= nextQuestion.question;
 
         moreQuestions.splice(randomQuestion, 1);
+        answerChosen = true ;
 
         choice.forEach(function (answer) { 
             const answerBtn = answer.dataset.option;
@@ -220,6 +222,10 @@ function getQuestion() {
 
 function answerSelection(e) {
 
+    if (answerChosen === false) return;
+
+    answerChosen = false;
+    
     const selectedOption = e.target;
     const userAnswer = selectedOption.dataset.option;
     
@@ -228,14 +234,13 @@ function answerSelection(e) {
     const result = userAnswer == nextQuestion.correctAnswer ? "correct" : "incorrect";
     selectedOption.parentElement.classList.add(result);
     
-    
+   
 
     if (result === 'correct') {
         increaseScore();
+        
     }
-  
-     nextBtn.classList.remove('hide')
-
+   nextBtn.classList.remove('hide')
 
      if (count >=10){
          nextBtn.classList.add('hide')
