@@ -535,7 +535,7 @@ font-size: 30px;
     
 }
 
-@media screen and (min-width: 280px) and (max-width:550px){
+@media screen and (min-width: 280px) and (max-width:600px){
     .header-photo{
         height:0px;
     }
@@ -601,37 +601,30 @@ font-size: 35px;
        height: 50px;
    }
 
-   #antarctica-answers{
-       padding: 20px;
-   }
 
    #antarctica-questions{
        font-size:25px;
-       padding: 10px;
+       padding-top: 25px;
    }
-
-#harry-answers{
-    padding:20px;
-}
 
 #harry-questions{
     font-size:25px;
-       padding: 10px;
+       padding-top: 25px;
 }
    #score{
        font-size: 10px;
-       top: 37px;
+       top: 5px;
        right: 15px;
    }
 
    #score-hp{
     font-size: 10px;
-    top: 37px;
+    top: 5px;
     right: 15px;
 }
    .count-container{
        font-size: 10px;
-       top: 37px;
+       top: 5px;
        left: 15px;
    }
    #next-btn{
@@ -662,6 +655,13 @@ font-size: 13px;
     }
     #exit-hp{
         font-size: 13px;
+    }
+
+    .antarctica-title{
+        display:none;
+    }
+    .harry-title{
+        display:none;
     }
    }
 

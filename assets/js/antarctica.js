@@ -40,6 +40,7 @@ let nextQuestion = {};
 let maximumQuestions = 10;
 let randomQuestion;
 let answerChosen = false;
+let correct = null;
 
 let antarcticaQuestions = [
     {
@@ -211,6 +212,8 @@ function getQuestion() {
         moreQuestions.splice(randomQuestion, 1);
         answerChosen = true ;
 
+        
+
         choice.forEach(function (answer) { 
             const answerBtn = answer.dataset.option;
             answer.innerText = nextQuestion[answerBtn] 
@@ -222,27 +225,23 @@ function getQuestion() {
 
 function answerSelection(e) {
 
-    if (answerChosen === false) return;
-
-    answerChosen = false;
+    if (answerBtn === nextQuestion['correctAnswer']){
+        correct = answer
+    }
     
     const selectedOption = e.target;
     const userAnswer = selectedOption.dataset.option;
     
-
-//code adapted from 
     const result = userAnswer == nextQuestion.correctAnswer ? "correct" : "incorrect";
-    selectedOption.parentElement.classList.add(result);
     
-   
-
     if (result === 'correct') {
-        increaseScore();
-        
+       
+        selectedOption.parentElement.classList.add(result);
+         increaseScore();
     }
     else {
-        correctOptionContainer.classList.remove('hide')
-        correctOption.innerText = nextQuestion.correctAnswer
+        correct.parentElement.classList.add('correct');
+        selectedOption.parentElement.classList.add(result)
     }
 
    nextBtn.classList.remove('hide')
