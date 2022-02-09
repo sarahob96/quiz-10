@@ -42,110 +42,109 @@ let randomQuestion;
 let answerChosen = false;
 let correct = null;
 
-let antarcticaQuestions = [
-    {
+let antarcticaQuestions = [{
         question: "Which of these animals do you NOT get in Antarctica?",
-        a: "Penguins" ,
-        b: "Whales" ,
-        c: "Polar bears" ,
+        a: "Penguins",
+        b: "Whales",
+        c: "Polar bears",
         d: "Seals",
-        
+
         correctAnswer: "c"
 
     },
     {
         question: "When did humans first SEE Antarctica?",
-         
-            a: "500 B.C" ,
-            b: "1000 A.D" ,
-            c: "1520 A.D" ,
-            d: "1820 A.D",
-        correctAnswer : "d"
+
+        a: "500 B.C",
+        b: "1000 A.D",
+        c: "1520 A.D",
+        d: "1820 A.D",
+        correctAnswer: "d"
     },
     {
-         question: "All mammals in Antarctica have..",
-            a: "fur",
-            b: "blubber",
-            c: "fins" ,
-            d: "teeth" ,
-        
-         correctAnswer : "b"
+        question: "All mammals in Antarctica have..",
+        a: "fur",
+        b: "blubber",
+        c: "fins",
+        d: "teeth",
+
+        correctAnswer: "b"
     },
     {
         question: "Antarctica is referred to as..",
- 
-         a: "The frozen Desert" ,
-         b: "Research Haven" ,
-         c: "The Titanic" ,
-         d: "The iceberg" ,
-        
-    correctAnswer: "a"
-},
-{
-    question: "Antarctica is in the..",
 
-    a: "Arctic Circle",
-    b: "South Pole",
-    c: "North Pole",
-    d: "Northern Hemisphere",
-    
-    correctAnswer: "b"
-},
-{
-    question: "How much of the Earths fresh water is found in Antarctica?",
+        a: "The frozen Desert",
+        b: "Research Haven",
+        c: "The Titanic",
+        d: "The iceberg",
 
-        a: "50%" ,
-        b: "20%" ,
+        correctAnswer: "a"
+    },
+    {
+        question: "Antarctica is in the..",
+
+        a: "Arctic Circle",
+        b: "South Pole",
+        c: "North Pole",
+        d: "Northern Hemisphere",
+
+        correctAnswer: "b"
+    },
+    {
+        question: "How much of the Earths fresh water is found in Antarctica?",
+
+        a: "50%",
+        b: "20%",
         c: "70%",
         d: "100%",
-        
-   correctAnswer: "c"
-},
-{
-    question: "Who are the only people to LIVE in Antarctica (on a temporary basis)?",
+
+        correctAnswer: "c"
+    },
+    {
+        question: "Who are the only people to LIVE in Antarctica (on a temporary basis)?",
 
         a: "Children",
         b: "Soldiers",
         c: "Researchers",
         d: "Politicians",
 
-    correctAnswer:"c"
-},
-{
-    question: "Which continent is Antarctica closest to?",
-     
-         a: "North America" ,
-       b: "Asia" ,
-        c: "Australia" ,
-         d: "Europe" ,
-    
-    correctAnswer: "c"
-},
-{
-    question: "The world's longest glacier is found on Antarctica. What is it called?",
-    
-        a: "Amundsen" ,
-        b: "Lambert" ,
-       c: "Beardmore" ,
-        d: "Scott" ,
-    
-    correctAnswer: "b"
-},
-{
-  question: "What research base is located at the South Pole?",
-   
-      a:"Vostok Research Base" ,
-      b:"Casey Research Base" ,
-      c:"Molodezhnaya Research Base" ,
-      d:"Amundsen-Scott Research Base" ,
-    
-  correctAnswer:"d"
-}
+        correctAnswer: "c"
+    },
+    {
+        question: "Which continent is Antarctica closest to?",
+
+        a: "North America",
+        b: "Asia",
+        c: "Australia",
+        d: "Europe",
+
+        correctAnswer: "c"
+    },
+    {
+        question: "The world's longest glacier is found on Antarctica. What is it called?",
+
+        a: "Amundsen",
+        b: "Lambert",
+        c: "Beardmore",
+        d: "Scott",
+
+        correctAnswer: "b"
+    },
+    {
+        question: "What research base is located at the South Pole?",
+
+        a: "Vostok Research Base",
+        b: "Casey Research Base",
+        c: "Molodezhnaya Research Base",
+        d: "Amundsen-Scott Research Base",
+
+        correctAnswer: "d"
+    }
 ]
 
 
 // start button
-startBtn.addEventListener('click', quizStart) 
+startBtn.addEventListener('click', quizStart)
 
 //begin button
 beginBtn.addEventListener('click', beginQuiz)
@@ -163,111 +162,107 @@ resetBtn.addEventListener('click', quizStart)
 exitBtn.addEventListener('click', returnHome)
 
 function quizStart() {
-startBtn.classList.add('hide')
-startPage.classList.add('hide')
-questions.classList.add('hide')
-resultBtn.classList.add('hide')
-nextBtn.classList.add('hide')
-rulesPage.classList.remove('hide')
-resultSection.classList.add('hide')
-userScore.innerText = 0;
+    startBtn.classList.add('hide')
+    startPage.classList.add('hide')
+    questions.classList.add('hide')
+    resultBtn.classList.add('hide')
+    nextBtn.classList.add('hide')
+    rulesPage.classList.remove('hide')
+    resultSection.classList.add('hide')
+    userScore.innerText = 0;
 
-choice1.classList.remove('incorrect')
-choice2.classList.remove('incorrect')
-choice3.classList.remove('incorrect')
-choice4.classList.remove('incorrect')
-choice1.classList.remove('correct')
-choice2.classList.remove('correct')
-choice3.classList.remove('correct')
-choice4.classList.remove('correct')
+    choice1.classList.remove('incorrect')
+    choice2.classList.remove('incorrect')
+    choice3.classList.remove('incorrect')
+    choice4.classList.remove('incorrect')
+    choice1.classList.remove('correct')
+    choice2.classList.remove('correct')
+    choice3.classList.remove('correct')
+    choice4.classList.remove('correct')
 }
 
 
 function beginQuiz() {
 
-rulesPage.classList.add('hide')
-questions.classList.remove('hide')
+    rulesPage.classList.add('hide')
+    questions.classList.remove('hide')
 
-score = 0;
-count = 0;
-randomQuestion = 0;
-moreQuestions = [...antarcticaQuestions]
-getQuestion()
+    score = 0;
+    count = 0;
+    randomQuestion = 0;
+    moreQuestions = [...antarcticaQuestions]
+    getQuestion()
 }
 
 function getQuestion() {
 
+    nextBtn.classList.add('hide')
+    count++;
+    questionCount.innerText = count;
+
+    if (count >= 10) {
         nextBtn.classList.add('hide')
-        count++;
-        questionCount.innerText = count;
-
-        if (count >= 10) {
-            nextBtn.classList.add('hide')
-        }
-
-        randomQuestion = Math.floor(Math.random() * moreQuestions.length)
-        nextQuestion = moreQuestions[randomQuestion]
-        questionTitle.innerText= nextQuestion.question;
-
-        moreQuestions.splice(randomQuestion, 1);
-        answerChosen = true ;
-
-        
-
-        choice.forEach(function (answer) { 
-            const answerBtn = answer.dataset.option;
-            answer.innerText = nextQuestion[answerBtn] 
-            answer.addEventListener('click', answerSelection)
-        })
-           
-         }
-        
-
-function answerSelection(e) {
-
-    if (answerBtn === nextQuestion['correctAnswer']){
-        correct = answer
-    }
-    
-    const selectedOption = e.target;
-    const userAnswer = selectedOption.dataset.option;
-    
-    const result = userAnswer == nextQuestion.correctAnswer ? "correct" : "incorrect";
-    
-    if (result === 'correct') {
-       
-        selectedOption.parentElement.classList.add(result);
-         increaseScore();
-    }
-    else {
-        correct.parentElement.classList.add('correct');
-        selectedOption.parentElement.classList.add(result)
     }
 
-   nextBtn.classList.remove('hide')
+    randomQuestion = Math.floor(Math.random() * moreQuestions.length)
+    nextQuestion = moreQuestions[randomQuestion]
+    questionTitle.innerText = nextQuestion.question;
 
-     if (count >=10){
-         nextBtn.classList.add('hide')
-         resultBtn.classList.remove('hide')
-     }
-
-} 
+    moreQuestions.splice(randomQuestion, 1);
+    answerChosen = true;
 
 
-function increaseScore() {
-score++;
-
-userScore.innerText= score;
+    choice.forEach(function (answer) {
+        const answerBtn = answer.dataset.option;
+        answer.innerText = nextQuestion[answerBtn]
+        answer.addEventListener('click', answerSelection)
+    })
 
 }
 
 
-function nextButton(){
+function answerSelection(e) {
+
+    if (answerChosen === false) return;
+
+    answerChosen = false;
+
+
+    const selectedOption = e.target;
+    const userAnswer = selectedOption.dataset.option;
+
+    const result = userAnswer == nextQuestion.correctAnswer ? "correct" : "incorrect";
+    selectedOption.parentElement.classList.add(result);
+
+    if (result === 'correct') {
+        increaseScore();
+
+    }
+
+    nextBtn.classList.remove('hide')
+
+    if (count >= 10) {
+        nextBtn.classList.add('hide')
+        resultBtn.classList.remove('hide')
+    }
+
+}
+
+
+function increaseScore() {
+    score++;
+
+    userScore.innerText = score;
+
+}
+
+
+function nextButton() {
 
     randomQuestion++;
 
     getQuestion(randomQuestion)
-   
+
     correctOptionContainer.classList.add('hide')
     choice1.classList.remove('incorrect')
     choice2.classList.remove('incorrect')
@@ -280,27 +275,28 @@ function nextButton(){
 }
 
 
-function finalResult(){ 
-resultSection.classList.remove('hide')
-questions.classList.add('hide')
-yourScore.innerText = score
+function finalResult() {
+    resultSection.classList.remove('hide')
+    questions.classList.add('hide')
+    yourScore.innerText = score
 
-if (score <= 10) {
-    scoreMessage.innerText= ` ICE champion.. You're an expert!`
+    if (score <= 10) {
+        scoreMessage.innerText = ` ICE champion.. You're an expert!`
+    }
+    if (score <= 8) {
+        scoreMessage.innerText = ` SnOw Close!!  `
+
+        if (score <= 6) {
+            scoreMessage.innerText = `N-ICE try!`
+        }
+    }
+    if (score <= 3) {
+        scoreMessage.innertext = `Brrrrrrr.. better luck next time!`
+    }
+
+
 }
-if (score <= 8) {
-    scoreMessage.innerText= ` SnOw Close!!  `
 
-if (score <= 6) {
-    scoreMessage.innerText= `N-ICE try!`
-}
-}if (score <= 3) {
-    scoreMessage.innertext= `Brrrrrrr.. better luck next time!`
-}
-
-
-}
-
-function returnHome(){
+function returnHome() {
     location.href = "index.html"
 }

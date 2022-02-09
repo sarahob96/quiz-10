@@ -40,14 +40,13 @@ let answerChosen = false;
 
 
 
-let harryPotterQuestions = [
-    {
+let harryPotterQuestions = [{
         question: "Harrys uncle and aunt, the Dursleys, live at what address?",
         a: "Number 4, Privet Drive",
         b: "Nine and three-quarters",
         c: "The trolls club",
         d: "Gringotts",
-    
+
         correctAnswer: "a"
     },
     {
@@ -57,7 +56,7 @@ let harryPotterQuestions = [
         c: "A pigs tail",
         d: "A shining star",
         correctAnswer: "b"
-    
+
     },
     {
         question: "Hermiones Parents are not wizards. What non-wizard job do they do?",
@@ -66,7 +65,7 @@ let harryPotterQuestions = [
         c: "Dentist",
         d: "Mechanic",
         correctAnswer: "c"
-    
+
     },
     {
         question: "How do the Dursleys say that Harrys parents died?",
@@ -82,7 +81,7 @@ let harryPotterQuestions = [
         b: "16 years",
         c: "17 years",
         d: "18 years",
-       correctAnswer: "b"
+        correctAnswer: "b"
     },
     {
         question: "On a Quidditch pitch, how many goal posts are there in total?",
@@ -119,14 +118,14 @@ let harryPotterQuestions = [
     {
         question: "Which spell can levitate objects?",
         a: "Wand",
-        b:"Petrificius Totalu",
+        b: "Petrificius Totalu",
         c: "Alohomora",
         d: "Wingardium Leviosa",
         correctAnswer: "d"
     }
-    ]
+]
 // start button
-startBtn.addEventListener('click', quizStart) 
+startBtn.addEventListener('click', quizStart)
 
 //begin button
 beginBtn.addEventListener('click', beginQuiz)
@@ -144,109 +143,109 @@ resetBtn.addEventListener('click', quizStart)
 exitBtn.addEventListener('click', returnHome)
 
 function quizStart() {
-startBtn.classList.add('hide')
-startPage.classList.add('hide')
-questions.classList.add('hide')
-resultBtn.classList.add('hide')
-nextBtn.classList.add('hide')
-rulesPage.classList.remove('hide')
-resultSection.classList.add('hide')
-userScore.innerText = 0;
+    startBtn.classList.add('hide')
+    startPage.classList.add('hide')
+    questions.classList.add('hide')
+    resultBtn.classList.add('hide')
+    nextBtn.classList.add('hide')
+    rulesPage.classList.remove('hide')
+    resultSection.classList.add('hide')
+    userScore.innerText = 0;
 
 
-choice1.classList.remove('incorrect')
-choice2.classList.remove('incorrect')
-choice3.classList.remove('incorrect')
-choice4.classList.remove('incorrect')
-choice1.classList.remove('correct')
-choice2.classList.remove('correct')
-choice3.classList.remove('correct')
-choice4.classList.remove('correct')
+    choice1.classList.remove('incorrect')
+    choice2.classList.remove('incorrect')
+    choice3.classList.remove('incorrect')
+    choice4.classList.remove('incorrect')
+    choice1.classList.remove('correct')
+    choice2.classList.remove('correct')
+    choice3.classList.remove('correct')
+    choice4.classList.remove('correct')
 
 }
 
 
 function beginQuiz() {
 
-rulesPage.classList.add('hide')
-questions.classList.remove('hide')
+    rulesPage.classList.add('hide')
+    questions.classList.remove('hide')
 
-score = 0;
-count = 0;
-randomQuestion = 0;
-moreQuestions = [...harryPotterQuestions]
-getQuestion()
+    score = 0;
+    count = 0;
+    randomQuestion = 0;
+    moreQuestions = [...harryPotterQuestions]
+    getQuestion()
 }
 
 function getQuestion() {
 
+    nextBtn.classList.add('hide')
+    count++;
+    questionCount.innerText = count;
+
+    if (count >= 10) {
         nextBtn.classList.add('hide')
-        count++;
-        questionCount.innerText = count;
+    }
 
-        if (count >= 10) {
-            nextBtn.classList.add('hide')
-        }
+    randomQuestion = Math.floor(Math.random() * moreQuestions.length)
+    nextQuestion = moreQuestions[randomQuestion]
+    questionTitle.innerText = nextQuestion.question;
 
-        randomQuestion = Math.floor(Math.random() * moreQuestions.length)
-        nextQuestion = moreQuestions[randomQuestion]
-        questionTitle.innerText= nextQuestion.question;
+    moreQuestions.splice(randomQuestion, 1);
+    answerChosen = true;
 
-        moreQuestions.splice(randomQuestion, 1);
-        answerChosen = true;
-
-        choice.forEach(function (answer) { 
-            const answerBtn = answer.dataset.option;
-            answer.innerText = nextQuestion[answerBtn]
-         answer.addEventListener('click', answerSelection)
+    choice.forEach(function (answer) {
+        const answerBtn = answer.dataset.option;
+        answer.innerText = nextQuestion[answerBtn]
+        answer.addEventListener('click', answerSelection)
 
     });
-         
+
 };
-          
+
 
 function answerSelection(e) {
-  
+
     if (answerChosen === false) return;
 
-    answerChosen = false; 
+    answerChosen = false;
 
     const selectedOption = e.target;
     const userAnswer = selectedOption.dataset.option;
-    
+
     const result = userAnswer == nextQuestion.correctAnswer ? "correct" : "incorrect";
     selectedOption.parentElement.classList.add(result);
-   
+
 
     if (result === 'correct') {
         increaseScore();
     }
 
-    
-     nextBtn.classList.remove('hide')
-     if (count >=10){
-         nextBtn.classList.add('hide')
-         resultBtn.classList.remove('hide')
-     }
-   
 
-} 
+    nextBtn.classList.remove('hide')
+    if (count >= 10) {
+        nextBtn.classList.add('hide')
+        resultBtn.classList.remove('hide')
+    }
 
-
-function increaseScore() {
-score++;
-
-userScore.innerText= score;
 
 }
 
 
-function nextButton(){
+function increaseScore() {
+    score++;
+
+    userScore.innerText = score;
+
+}
+
+
+function nextButton() {
 
     randomQuestion++;
 
     getQuestion(randomQuestion)
-   
+
     choice1.classList.remove('incorrect')
     choice2.classList.remove('incorrect')
     choice3.classList.remove('incorrect')
@@ -258,27 +257,27 @@ function nextButton(){
 }
 
 
-function finalResult(){ 
-resultSection.classList.remove('hide')
-questions.classList.add('hide')
-yourScore.innerText = score
+function finalResult() {
+    resultSection.classList.remove('hide')
+    questions.classList.add('hide')
+    yourScore.innerText = score
 
-if (score <=10) {
-    scoreMessage.innerText= ` You're a WIZARD!`
-}
-if (score <=8) {
-    scoreMessage.innerText= ` Nearly as smart as Hermione.... `
+    if (score <= 10) {
+        scoreMessage.innerText = ` You're a WIZARD!`
+    }
+    if (score <= 8) {
+        scoreMessage.innerText = ` Nearly as smart as Hermione.... `
 
-if (score <=6) {
-    scoreMessage.innerText= ` Not quite Gryfinndor standards`
-}
-}if (score <=3) {
-    scoreMessage.innertext= `You must be a muggle.... try again!`
-}
+        if (score <= 6) {
+            scoreMessage.innerText = ` Not quite Gryfinndor standards`
+        }
+    }
+    if (score <= 3) {
+        scoreMessage.innertext = `You must be a muggle.... try again!`
+    }
 
 }
 
-function returnHome(){
+function returnHome() {
     location.href = "index.html"
 }
-

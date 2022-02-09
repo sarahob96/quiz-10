@@ -1,151 +1,160 @@
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
 }
 
 
-body{
+body {
 
     font-family: Darker Grotesque;
     background-color: #349db3;
-    height:100vh; 
-    width:100vw;
+    height: 100vh;
+    width: 100vw;
     box-sizing: border-box;
 }
 
-.choice-button{
+.choice-button {
 
-    height:60px;
+    height: 60px;
     display: flex;
     flex-direction: row;
     align-items: center;
     background-color: #2A6673;
-    margin:10px;
+    margin: 10px;
     border: 1px solid;
-    color:white;
+    color: white;
     opacity: 1px;
     font-size: 30px;
     text-align: center;
-  
+
 }
-.choice-hp{
+
+.choice-hp {
     background-color: #6c66be;
 }
 
-#score{
+#score {
     border: 1px solid;
     border-radius: 20px;
-    font-size:20px;
+    font-size: 20px;
     font-weight: bolder;
     width: 20%;
     padding: 10px;
 }
 
-#next-btn{
+#next-btn {
     font-size: 20px;
     border-radius: 25px;
     background-color: white;
     padding: 10px;
 }
 
-#next-btn-hp{
+#next-btn-hp {
     font-size: 20px;
     border-radius: 25px;
     background-color: white;
     padding: 10px;
 }
 
-#result-btn-hp{
+#result-btn-hp {
     font-size: 20px;
     border-radius: 25px;
     background-color: white;
     padding: 10px;
 }
-#result-btn{
+
+#result-btn {
     font-size: 20px;
     border-radius: 25px;
     background-color: white;
     padding: 10px;
-    
+
 }
-.header-photo{
-    float:right;
+
+.header-photo {
+    float: right;
     height: 200px;
-    top:20px;
-    right:30px;
-    position:absolute;
+    top: 20px;
+    right: 30px;
+    position: absolute;
 }
 
-.message{
-font-size: 30px;
-padding: 20px;
-
-}
-.message-hp{
-font-size: 30px;
-padding: 20px;
-color:white;
+.message {
+    font-size: 30px;
+    padding: 20px;
 
 }
 
-.final-score{
-font-size: 20px;
-width: 100;
-padding: 10px;
+.message-hp {
+    font-size: 30px;
+    padding: 20px;
+    color: white;
+
 }
 
-.final-score-hp{
-font-size: 20px;
-width: 100;
-padding: 10px;
-color:white;
+.final-score {
+    font-size: 20px;
+    width: 100;
+    padding: 10px;
 }
-.result-footer{
+
+.final-score-hp {
+    font-size: 20px;
+    width: 100;
+    padding: 10px;
+    color: white;
+}
+
+.result-footer {
     margin: 20px;
     display: flex;
     justify-content: center;
     justify-content: space-around;
     flex-direction: row;
-    
+
 }
-.question-header{
+
+.question-header {
     justify-content: center;
     justify-content: space-around;
     flex-direction: row;
 }
-#your-score{
-font-size: 25px;
-font-weight: bolder;
-margin: 0 auto;
+
+#your-score {
+    font-size: 25px;
+    font-weight: bolder;
+    margin: 0 auto;
 }
 
-#score-hp{
+#score-hp {
     border: 1px solid;
     border-radius: 20px;
-    font-size:20px;
+    font-size: 20px;
     font-weight: bolder;
     width: 20%;
     padding: 10px;
-    float:right;
-    position:absolute;
+    float: right;
+    position: absolute;
     top: 30px;
     right: 30px;
     background-color: white;
 }
-#score{
+
+#score {
     border: 1px solid;
     border-radius: 20px;
-    font-size:20px;
+    font-size: 20px;
     font-weight: bolder;
     width: 20%;
     padding: 10px;
-    float:right;
-    position:absolute;
+    float: right;
+    position: absolute;
     top: 30px;
     right: 30px;
     background-color: white;
 }
-.count-container{
+
+.count-container {
     float: left;
     position: absolute;
     top: 30px;
@@ -153,31 +162,31 @@ margin: 0 auto;
     border-radius: 20px;
     border: 1px solid;
     font-weight: bolder;
-    width:20%;
+    width: 20%;
     padding: 10px;
     font-size: 20px;
     background-color: white;
 }
 
-#reset{
+#reset {
     font-size: 20px;
     border-radius: 25px;
     background-color: #4437EE;
     padding: 10px;
     color: white;
-    
+
 }
 
-#reset-hp{
+#reset-hp {
     font-size: 20px;
     border-radius: 25px;
     background-color: #6c66be;
     padding: 10px;
     color: white;
-    
+
 }
 
-#exit-hp{
+#exit-hp {
     font-size: 20px;
     border-radius: 25px;
     background-color: #349db3;
@@ -185,86 +194,93 @@ margin: 0 auto;
     color: white;
 
 }
-#exit{
+
+#exit {
     font-size: 20px;
     border-radius: 25px;
     background-color: #349db3;
     padding: 10px;
     color: white;
-   
+
 }
 
-p.choice{
-    
-    height:100%;
-    width:100%;
-    
+p.choice {
+
+    height: 100%;
+    width: 100%;
+
 }
-p.choice:hover{
+
+p.choice:hover {
     cursor: pointer;
 }
 
 
 
-.slide{
-position: absolute;
-transform: translate(-50%, -50%);
-width:50%;
-top: 50%;
-left:50%;
-text-align: center;
-background-color:#acd9e4;
-border: 1px solid;
-border-radius: 25px;
-padding: 30px;
+.slide {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    background-color: #acd9e4;
+    border: 1px solid;
+    border-radius: 25px;
+    padding: 30px;
 }
-.slide-hp{
-position: absolute;
-transform: translate(-50%, -50%);
-width:50%;
-top: 50%;
-left:50%;
-text-align: center;
-background-color: #423ba1;
-border: 1px solid;
-border-radius: 25px;
-padding: 30px;
+
+.slide-hp {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    background-color: #423ba1;
+    border: 1px solid;
+    border-radius: 25px;
+    padding: 30px;
 }
-.main-heading{
+
+.main-heading {
     color: white;
     font-size: 70px;
     letter-spacing: 2px;
     padding: 20px 20px 5px 20px;
 
-    
+
 }
-.tag-line{
+
+.tag-line {
     padding: 0px 20px 10px 20px;
     color: white;
     font-weight: bolder;
     font-size: 30px;
 }
-.correct{
+
+.correct {
     background-color: green;
 }
 
-.incorrect{
-background-color:red;
+.incorrect {
+    background-color: red;
 }
-.weekly-quiz-heading{
-    
+
+.weekly-quiz-heading {
+
     background-color: white;
-    color:#2A6673;
+    color: #2A6673;
     letter-spacing: 2px;
     font-size: 160%;
     text-align: center;
     padding: 20px;
     margin-top: 50px;
 
-       
+
 }
 
-.about-heading{
+.about-heading {
     text-decoration: underline;
     color: white;
     letter-spacing: 2px;
@@ -273,34 +289,38 @@ background-color:red;
 
 
 }
-.about-text{
+
+.about-text {
     text-align: center;
     padding: 20px;
     font-weight: bolder;
     font-size: 30px;
 }
-.last-quiz-heading{
+
+.last-quiz-heading {
     text-decoration: underline;
-    color:#2A6673;
+    color: #2A6673;
     letter-spacing: 2px;
     font-size: 150%;
     text-align: center;
     padding-top: 50px;
 
 }
+
 /* weekly-quiz section*/
 
-.start-heading{
-letter-spacing: 2px;
-font-weight: bolder;
-font-size: 40px;
-padding: 20px;
-color: white;
-text-shadow: 2px 2px black;
+.start-heading {
+    letter-spacing: 2px;
+    font-weight: bolder;
+    font-size: 40px;
+    padding: 20px;
+    color: white;
+    text-shadow: 2px 2px black;
 
 }
-.start-heading-hp{
-    color:white;
+
+.start-heading-hp {
+    color: white;
     font-size: 40px;
     padding: 20px;
     letter-spacing: 2px;
@@ -308,198 +328,213 @@ text-shadow: 2px 2px black;
     text-shadow: 2px 2px black;
 }
 
-.start-paragraph{
-letter-spacing: 0.5px;
-font-size: large;
-font-size: 25px;
+.start-paragraph {
+    letter-spacing: 0.5px;
+    font-size: large;
+    font-size: 25px;
 }
 
-button.btn:hover{
+button.btn:hover {
     cursor: pointer;
 }
-#start-btn-hp{
-margin: 30px;
-font-size: 25px;
-padding:10px;
-border-radius: 20px;
-background-color: white;
-width: 30%;
-}
-#start-btn{ 
 
-margin: 30px;
-font-size: 25px;
-padding:10px;
-border-radius: 20px;
-background-color: white;
-width: 30%;
-    
+#start-btn-hp {
+    margin: 30px;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: white;
+    width: 30%;
 }
 
-.rules-heading{
+#start-btn {
+
+    margin: 30px;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: white;
+    width: 30%;
+
+}
+
+.rules-heading {
     font-size: 30px;
     letter-spacing: 2px;
     padding: 10px;
 
 }
-.rules-heading-hp{
+
+.rules-heading-hp {
     font-size: 30px;
     letter-spacing: 2px;
     padding: 10px;
     color: white;
 }
 
-.text{
+.text {
     font-size: 20px;
     font-weight: bolder;
-    
+
 }
-.weekly-quiz{
-   
-  
-    width:100%;
+
+.weekly-quiz {
+
+
+    width: 100%;
     padding-top: 10px;
     position: relative;
 }
-.antarctica-quiz{
-    
-    width:80%;
+
+.antarctica-quiz {
+
+    width: 80%;
     text-align: center;
     padding: 20px;
     margin: 0 auto;
     overflow: hidden;
-  
+
 }
-.harry-title{
-font-size: 30px;
-padding-bottom: 0;
-color:white
+
+.harry-title {
+    font-size: 30px;
+    padding-bottom: 0;
+    color: white
 }
-.antarctica-title{
-font-size: 30px;
-padding-bottom: 0;
+
+.antarctica-title {
+    font-size: 30px;
+    padding-bottom: 0;
 }
 
 
-#antarctica-questions{
-font-size: 30px;
+#antarctica-questions {
+    font-size: 30px;
 }
 
-#harry-questions{
+#harry-questions {
     font-size: 30px;
     color: white;
 }
-.image-text{
+
+.image-text {
 
     font-size: 50px;
-   text-align: center;
-   color:white;
-   
-}
-a{
-    text-decoration: none;
-    color:white;
-    
+    text-align: center;
+    color: white;
+
 }
 
-.begin-btn{
+a {
+    text-decoration: none;
+    color: white;
+
+}
+
+.begin-btn {
     font-size: 20px;
     margin: 20px;
     border-radius: 25px;
     padding: 10px;
 }
-.iceberg-image{
 
-   border-radius: 25px;
-   max-height:100%;
-   width:80%;
-   
+.iceberg-image {
+
+    border-radius: 25px;
+    max-height: 100%;
+    width: 80%;
+
 }
 
-.harry-potter-image{
+.harry-potter-image {
     max-height: 100%;
-    width:80%;
+    width: 80%;
     border-radius: 25px;
 }
-.last-quiz{
 
-    height:500px;
-    width:100%;
+.last-quiz {
+
+    height: 500px;
+    width: 100%;
     padding-top: 90px;
 }
 
-.harry-potter-quiz{
+.harry-potter-quiz {
 
- width:80%;
- text-align: center;
- margin: 0 auto;
-
-}
-
-
-.harry-potter-background{
-    height:100vh;
-    width:100%;
-}
-
-.antarctica-quiz-background{
-    height:100vh;
-    width:100%;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
 
 }
 
-.antarctica-section{
+
+.harry-potter-background {
+    height: 100vh;
+    width: 100%;
+}
+
+.antarctica-quiz-background {
+    height: 100vh;
+    width: 100%;
+
+}
+
+.antarctica-section {
     height: 100vh;
     width: 100vw;
     background-image: url('../images/penguins-1.jpeg');
-    background-size: cover ;
+    background-size: cover;
 }
 
-.harry-potter-section{
+.harry-potter-section {
     height: 100vh;
     width: 100vw;
     background-image: url('../images/harry-image.jpeg');
     background-size: cover;
 }
-footer{
-    
+
+footer {
+
     bottom: 0px;
 }
 
 
-.start-page{
-    position:relative;
-   
-    
+.start-page {
+    position: relative;
+
+
 }
 
-.hide{
-    display:none;
+.hide {
+    display: none;
 }
 
 
-.welcome{
+.welcome {
     width: 60%;
     height: 400px;
     background-color: #2A6673;
-    position:absolute;
-    top:30%;
-    right:20%;
+    position: absolute;
+    top: 30%;
+    right: 20%;
 
 }
 
-.socials > li {
+.socials>li {
     display: inline;
 }
+
 .socials {
     text-align: center;
 }
+
 .socials i {
     font-size: 30px;
     padding: 30px;
     color: #F4F4E8;
 }
-.copyright{
+
+.copyright {
     text-align: center;
     color: white;
     font-size: larger;
@@ -510,159 +545,175 @@ footer{
 /* Media Queries */
 
 @media screen and (min-width: 850px) {
-    
-    .header-photo{
-height: 150px;
-    }
-    .tag-line{
-font-size: 50px;
+
+    .header-photo {
+        height: 150px;
     }
 
-    .main-heading{
-font-size: 50px;
+    .tag-line {
+        font-size: 50px;
+    }
+
+    .main-heading {
+        font-size: 50px;
     }
 }
 
 @media screen and (min-width:540px) and (max-width:850px) {
-    
-    .header-photo{
-        height:150px;
-        top:30px;
+
+    .header-photo {
+        height: 150px;
+        top: 30px;
     }
-    .tag-line{
-font-size: 30px;
+
+    .tag-line {
+        font-size: 30px;
     }
-    
+
 }
 
-@media screen and (min-width: 280px) and (max-width:600px){
-    .header-photo{
-        height:0px;
+@media screen and (min-width: 280px) and (max-width:600px) {
+    .header-photo {
+        height: 0px;
     }
-    .main-heading{
+
+    .main-heading {
         font-size: 40px;
         text-align: center;
     }
 
-    .tag-line{
-        font-size:20px;
+    .tag-line {
+        font-size: 20px;
         text-align: center;
     }
 
-    .weekly-quiz-heading{
+    .weekly-quiz-heading {
         padding: 10px 10px 5px 10px;
         font-size: 120%;
     }
-   .image-text{
-       font-size: 40px;
-   }
 
-   .about-heading{
-font-size: 35px;
-   }
-
-   .about-text{
-       font-size: 20px;
-   }
-
-   .harry-potter-quiz{
-       width:100%;
-   }
-
-   .slide{
-    width: 85%;
-    padding: 0;
-   }
-   .slide-hp{
-    width: 85%;
-    padding: 0;
-
-   }
-
-   .start-heading{
-       letter-spacing: 0;
-       font-size: 35px;
-   }
-
-   .start-paragraph{
-       font-size: 20px;
-   }
-   #start-btn{
-       font-size: 25px;
-   }
-
-   .text{
-       font-size: 15px;
-   }
-   .begin-btn{
-       font-size: 15px;
-   }
-   .choice-button{
-       height: 50px;
-   }
-
-
-   #antarctica-questions{
-       font-size:25px;
-       padding-top: 25px;
-   }
-
-#harry-questions{
-    font-size:25px;
-       padding-top: 25px;
-}
-   #score{
-       font-size: 10px;
-       top: 5px;
-       right: 15px;
-   }
-
-   #score-hp{
-    font-size: 10px;
-    top: 5px;
-    right: 15px;
-}
-   .count-container{
-       font-size: 10px;
-       top: 5px;
-       left: 15px;
-   }
-   #next-btn{
-       font-size: 15px;
-       margin:10px;
-   }
-
-   #next-btn-hp{
-    font-size: 15px;
-    margin:10px;
-
-   }
-   #result-btn{
-    font-size: 15px;
-    margin:10px;
-   }
-   p.choice{
-       font-size: 18px;
-   }
-   #reset{
-       font-size: 13px;
-   }
-   #reset-hp{
-       font-size:13px;
-   }
-  #exit{
-font-size: 13px;
+    .image-text {
+        font-size: 40px;
     }
-    #exit-hp{
+
+    .about-heading {
+        font-size: 35px;
+    }
+
+    .about-text {
+        font-size: 20px;
+    }
+
+    .harry-potter-quiz {
+        width: 100%;
+    }
+
+    .slide {
+        width: 85%;
+        padding: 0;
+    }
+
+    .slide-hp {
+        width: 85%;
+        padding: 0;
+
+    }
+
+    .start-heading {
+        letter-spacing: 0;
+        font-size: 35px;
+    }
+
+    .start-paragraph {
+        font-size: 20px;
+    }
+
+    #start-btn {
+        font-size: 25px;
+    }
+
+    .text {
+        font-size: 15px;
+    }
+
+    .begin-btn {
+        font-size: 15px;
+    }
+
+    .choice-button {
+        height: 50px;
+    }
+
+
+    #antarctica-questions {
+        font-size: 25px;
+        padding-top: 25px;
+    }
+
+    #harry-questions {
+        font-size: 25px;
+        padding-top: 25px;
+    }
+
+    #score {
+        font-size: 10px;
+        top: 5px;
+        right: 15px;
+    }
+
+    #score-hp {
+        font-size: 10px;
+        top: 5px;
+        right: 15px;
+    }
+
+    .count-container {
+        font-size: 10px;
+        top: 5px;
+        left: 15px;
+    }
+
+    #next-btn {
+        font-size: 15px;
+        margin: 10px;
+    }
+
+    #next-btn-hp {
+        font-size: 15px;
+        margin: 10px;
+
+    }
+
+    #result-btn {
+        font-size: 15px;
+        margin: 10px;
+    }
+
+    p.choice {
+        font-size: 18px;
+    }
+
+    #reset {
         font-size: 13px;
     }
 
-    .antarctica-title{
-        display:none;
+    #reset-hp {
+        font-size: 13px;
     }
-    .harry-title{
-        display:none;
-    }
-   }
 
-    
+    #exit {
+        font-size: 13px;
+    }
+
+    #exit-hp {
+        font-size: 13px;
+    }
+
+    .antarctica-title {
+        display: none;
+    }
+
+    .harry-title {
+        display: none;
+    }
+}

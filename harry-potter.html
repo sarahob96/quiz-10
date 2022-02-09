@@ -2,13 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset= "UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, inital-scale=1.0">
     <meta name="keywords" content=" quiz, trivia, knowledge, 10 questions, submit quiz">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/cc5874c006.js" crossorigin="anonymous"></script>
 
@@ -17,87 +18,88 @@
 </head>
 
 <body>
-   <!--Quiz Section-->
-   <section class="harry-potter-section">
+    <!--Quiz Section-->
+    <section class="harry-potter-section">
 
-    <!-- start page -->>
-    
-    <div id="start-page-hp" class="start-page, slide-hp">
-        <div class = "start-text">
-        <h2 class = "start-heading-hp"> Welcome to the Harry Potter quiz </h2>
+        <!-- start page -->>
+
+        <div id="start-page-hp" class="start-page, slide-hp">
+            <div class="start-text">
+                <h2 class="start-heading-hp"> Welcome to the Harry Potter quiz </h2>
                 <p class="start-paragraph"> Click START to begin</p>
+            </div>
+
+            <div>
+                <button id="start-btn-hp" class="btn"> Start </button>
+            </div>
         </div>
-        
-       <div>
-           <button id="start-btn-hp" class="btn"> Start </button>
-       </div>
-    </div>
 
-<!-- Quiz rules -->
+        <!-- Quiz rules -->
 
-<div id="quiz-rules-hp" class="hide slide-hp">
-    <div class="heading-rules-page">
-        <h3 class="rules-heading-hp"> Quiz Rules</h3>
-    </div>
-    <div class="rules-text">
-    <div class="text">1. You will get to test your knowledge with 10 Questions in this weeks quiz</div>
-    <div class="text">2. You can achieve a maximum score of 10/10</div>
-    <div class="text">3. Only one answer is correct for every question</div>
-    <div class="text">4. You can only reset the quiz once you have completed all 10 questions</div>
-    </div>
-    <div>
-    <button class="begin-btn btn" id="begin-hp"> Begin Quiz </button> 
-    </div>
-</div>
-
-
-<div id="quiz-section-hp" class="hide slide-hp">
-   <!--question count-->
-    <h1 class="harry-title"> Question </h1> <br>
-    <div class="count-container">
-    <h3 class="quiz-count"><span id="counter-hp">1</span> of 10</h3>
-    </div>
-    <div id="score-hp">
-        SCORE: <span id="user-score-hp">0</span>
-    </div>
-    <div id="harry-questions"></div>
-    <div id="harry-answers">
-        <div class="choice-button choice-hp" id="choice-1">
-        <p class="choice" data-option="a"></p>
+        <div id="quiz-rules-hp" class="hide slide-hp">
+            <div class="heading-rules-page">
+                <h3 class="rules-heading-hp"> Quiz Rules</h3>
+            </div>
+            <div class="rules-text">
+                <div class="text">1. You will get to test your knowledge with 10 Questions in this weeks quiz</div>
+                <div class="text">2. You can achieve a maximum score of 10/10</div>
+                <div class="text">3. Only one answer is correct for every question</div>
+                <div class="text">4. You can only reset the quiz once you have completed all 10 questions</div>
+            </div>
+            <div>
+                <button class="begin-btn btn" id="begin-hp"> Begin Quiz </button>
+            </div>
         </div>
-        <div class="choice-button choice-hp" id="choice-2">
-        <p class="choice" data-option="b"></p>
-        </div>
-        <div class="choice-button choice-hp" id="choice-3">
-        <p class="choice" data-option="c"></p>
-        </div>
-        <div class="choice-button choice-hp" id="choice-4">
-            <p class="choice" data-option="d"></p>
-        </div>
-    </div>
-    <div class="quiz-footer">
-       
-        <button id="next-btn-hp"> Next Question</button>
-        <button id="result-btn-hp" class="hide"> View your result</button>
-    </div>
-    </div>
 
-<!--results section-->
-<div id="results-container-hp" class="hide slide-hp">
-<div class="message-hp"> Thanks for trying out last weeks quiz pick! </div>
 
-<div class="final-score-hp">
-    <p><i class="fas fa-hat-wizard"></i> Your score <i class="fas fa-hat-wizard"></i></p>
-    <p id="your-score-hp"> 0 </p>
-    <p id="score-message-hp"></p>
-</div>
+        <div id="quiz-section-hp" class="hide slide-hp">
+            <!--question count-->
+            <h1 class="harry-title"> Question </h1> <br>
+            <div class="count-container">
+                <h3 class="quiz-count"><span id="counter-hp">1</span> of 10</h3>
+            </div>
+            <div id="score-hp">
+                SCORE: <span id="user-score-hp">0</span>
+            </div>
+            <div id="harry-questions"></div>
+            <div id="harry-answers">
+                <div class="choice-button choice-hp" id="choice-1">
+                    <p class="choice" data-option="a"></p>
+                </div>
+                <div class="choice-button choice-hp" id="choice-2">
+                    <p class="choice" data-option="b"></p>
+                </div>
+                <div class="choice-button choice-hp" id="choice-3">
+                    <p class="choice" data-option="c"></p>
+                </div>
+                <div class="choice-button choice-hp" id="choice-4">
+                    <p class="choice" data-option="d"></p>
+                </div>
+            </div>
+            <div class="quiz-footer">
 
-<div class="btn result-footer">
-<button id="reset-hp" class="btn"> Reset Quiz</button>
-<button id="exit-hp" class="btn"> Exit Quiz</button>
-</div>
-</div>
-   </section>
-<script src="assets/js/harry-potter.js"></script>
+                <button id="next-btn-hp"> Next Question</button>
+                <button id="result-btn-hp" class="hide"> View your result</button>
+            </div>
+        </div>
+
+        <!--results section-->
+        <div id="results-container-hp" class="hide slide-hp">
+            <div class="message-hp"> Thanks for trying out last weeks quiz pick! </div>
+
+            <div class="final-score-hp">
+                <p><i class="fas fa-hat-wizard"></i> Your score <i class="fas fa-hat-wizard"></i></p>
+                <p id="your-score-hp"> 0 </p>
+                <p id="score-message-hp"></p>
+            </div>
+
+            <div class="btn result-footer">
+                <button id="reset-hp" class="btn"> Reset Quiz</button>
+                <button id="exit-hp" class="btn"> Exit Quiz</button>
+            </div>
+        </div>
+    </section>
+    <script src="assets/js/harry-potter.js"></script>
 </body>
+
 </html>

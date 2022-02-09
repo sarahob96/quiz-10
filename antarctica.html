@@ -2,13 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset= "UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, inital-scale=1.0">
     <meta name="keywords" content=" quiz, trivia, knowledge, 10 questions, submit quiz">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/cc5874c006.js" crossorigin="anonymous"></script>
 
@@ -19,86 +20,87 @@
 <body>
 
     <section class="antarctica-section">
-       
-    <!-- Start page with start button-->
-    <div id="start-page" class="start-page slide">
-        <div class="start-text">
-         <h2 class = "start-heading"> Welcome to the Antarctica Quiz</h2>
-            <p class= "start-paragraph"> Click START to begin</p>
-     </div>
-         <div> 
-             <button id="start-btn" class="btn"> Start </button>
-         </div>  
-    </div>
 
-    <!-- Quiz rules -->
-    <div id="quiz-rules" class="hide slide"> 
-        <div class="heading-rules-page">
-            <h3 class="rules-heading"> Quiz Rules </h3>
+        <!-- Start page with start button-->
+        <div id="start-page" class="start-page slide">
+            <div class="start-text">
+                <h2 class="start-heading"> Welcome to the Antarctica Quiz</h2>
+                <p class="start-paragraph"> Click START to begin</p>
+            </div>
+            <div>
+                <button id="start-btn" class="btn"> Start </button>
+            </div>
         </div>
-        <div class="rules-text"> 
-            <div class="text">1. You will get to test your knowledge with 10 Questions in this weeks quiz</div>
-            <div class="text">2. You can achieve a maximum score of 10/10</div>
-            <div class="text">3. Only one answer is correct for every question</div>
-            <div class="text">4. You can only reset the quiz once you have completed all 10 questions</div>
-        </div>
-        <div><button class="begin-btn btn" id="begin"> Begin Quiz </button>
-   
-        </div>
-    </div>
 
-    <!-- Antarctica quiz section-->
+        <!-- Quiz rules -->
+        <div id="quiz-rules" class="hide slide">
+            <div class="heading-rules-page">
+                <h3 class="rules-heading"> Quiz Rules </h3>
+            </div>
+            <div class="rules-text">
+                <div class="text">1. You will get to test your knowledge with 10 Questions in this weeks quiz</div>
+                <div class="text">2. You can achieve a maximum score of 10/10</div>
+                <div class="text">3. Only one answer is correct for every question</div>
+                <div class="text">4. You can only reset the quiz once you have completed all 10 questions</div>
+            </div>
+            <div><button class="begin-btn btn" id="begin"> Begin Quiz </button>
 
-    <div id="quiz-section" class="hide slide"> 
-
-        <h1 class="antarctica-title"> Question </h1> <br> 
-        <div class="count-container">
-            <h3 class="quiz-count"><span id="counter"> 1</span> of 10 </h3>
+            </div>
         </div>
-            <div id="score"> 
+
+        <!-- Antarctica quiz section-->
+
+        <div id="quiz-section" class="hide slide">
+
+            <h1 class="antarctica-title"> Question </h1> <br>
+            <div class="count-container">
+                <h3 class="quiz-count"><span id="counter"> 1</span> of 10 </h3>
+            </div>
+            <div id="score">
                 SCORE: <span id="user-score"> 0 </span></div>
-        <div id="antarctica-questions"> </div>
-        <div id="antarctica-answers"> 
-    <div class="choice-button" id="choice1"> 
-    <p class="choice" data-option="a"></p>
-    </div>
-    <div class="choice-button" id="choice2"> 
-    <p class="choice" data-option="b"></p>
-    </div>
-    <div class="choice-button" id="choice3"> 
-    <p class="choice" data-option="c"></p>
-    </div>
-    <div class="choice-button" id="choice4">
-    <p class="choice" data-option="d"></p>
-    </div>
-</div>
-      <div id="quiz-footer">
-        <p id="correct-option-container" class="hide"> The correct answer was..  <span id="correct-option"></span>  </p>
-        <button id="next-btn"> Next Question</button>
-        <button id="result-btn" class="hide"> View your Result</button>
+            <div id="antarctica-questions"> </div>
+            <div id="antarctica-answers">
+                <div class="choice-button" id="choice1">
+                    <p class="choice" data-option="a"></p>
+                </div>
+                <div class="choice-button" id="choice2">
+                    <p class="choice" data-option="b"></p>
+                </div>
+                <div class="choice-button" id="choice3">
+                    <p class="choice" data-option="c"></p>
+                </div>
+                <div class="choice-button" id="choice4">
+                    <p class="choice" data-option="d"></p>
+                </div>
+            </div>
+            <div id="quiz-footer">
+                <p id="correct-option-container" class="hide"> The correct answer was.. <span
+                        id="correct-option"></span> </p>
+                <button id="next-btn"> Next Question</button>
+                <button id="result-btn" class="hide"> View your Result</button>
 
-    </div>
-</div>
+            </div>
+        </div>
 
 
-  <!-- Results section -->   
-  <div id="results-container" class="hide slide">
-      <div class="message"> Thanks for trying out this weeks quiz pick! </div>
-        
-  <div class="final-score"> 
-      <p> <i class="far fa-snowflake"></i> Your score <i class="far fa-snowflake"></i> </p>
-      <p id="your-score"> 0 </p>
-      <p id="score-message"></p>
-  </div>
-  <div class="btn result-footer">
-      <button id="reset" class="btn"> Reset Quiz</button>
-      <button id="exit" class="btn"> Exit Quiz</button>
-  </div>
-  </div>
+        <!-- Results section -->
+        <div id="results-container" class="hide slide">
+            <div class="message"> Thanks for trying out this weeks quiz pick! </div>
 
-  
-</section>
-  <script src="assets/js/antarctica.js"></script>
+            <div class="final-score">
+                <p> <i class="far fa-snowflake"></i> Your score <i class="far fa-snowflake"></i> </p>
+                <p id="your-score"> 0 </p>
+                <p id="score-message"></p>
+            </div>
+            <div class="btn result-footer">
+                <button id="reset" class="btn"> Reset Quiz</button>
+                <button id="exit" class="btn"> Exit Quiz</button>
+            </div>
+        </div>
+
+
+    </section>
+    <script src="assets/js/antarctica.js"></script>
 </body>
 
 
