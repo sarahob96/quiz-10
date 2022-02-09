@@ -1,40 +1,37 @@
 //start section
-const startBtn = document.getElementById("start-btn-hp")
-const startPage = document.getElementById("start-page-hp")
+const startBtn = document.getElementById("start-btn-hp");
+const startPage = document.getElementById("start-page-hp");
 
 //rules section
-const rulesPage = document.getElementById("quiz-rules-hp")
-const beginBtn = document.getElementById("begin-hp")
+const rulesPage = document.getElementById("quiz-rules-hp");
+const beginBtn = document.getElementById("begin-hp");
 
 //questions section
-const questionCount = document.getElementById("counter-hp")
-const questions = document.getElementById("quiz-section-hp")
-const questionTitle = document.getElementById("harry-questions")
-const nextBtn = document.getElementById("next-btn-hp")
-const choiceBtn = document.getElementById("harry-answers")
-const choice = Array.from(document.querySelectorAll(".choice"))
-const choiceDiv = document.getElementsByClassName("choice-button")
-const userScore = document.getElementById("user-score-hp")
-const choice1 = document.getElementById('choice-1')
-const choice2 = document.getElementById('choice-2')
-const choice3 = document.getElementById('choice-3')
-const choice4 = document.getElementById('choice-4')
+const questionCount = document.getElementById("counter-hp");
+const questions = document.getElementById("quiz-section-hp");
+const questionTitle = document.getElementById("harry-questions");
+const nextBtn = document.getElementById("next-btn-hp");
+const choice = Array.from(document.querySelectorAll(".choice"));
+const userScore = document.getElementById("user-score-hp");
+const choice1 = document.getElementById('choice-1');
+const choice2 = document.getElementById('choice-2');
+const choice3 = document.getElementById('choice-3');
+const choice4 = document.getElementById('choice-4');
 
 //results section
 
-const resultBtn = document.getElementById("result-btn-hp")
-const resultSection = document.getElementById("results-container-hp")
-const resetBtn = document.getElementById("reset-hp")
-const exitBtn = document.getElementById('exit-hp')
-const yourScore = document.getElementById('your-score-hp')
-const scoreMessage = document.getElementById('score-message-hp')
+const resultBtn = document.getElementById("result-btn-hp");
+const resultSection = document.getElementById("results-container-hp");
+const resetBtn = document.getElementById("reset-hp");
+const exitBtn = document.getElementById('exit-hp');
+const yourScore = document.getElementById('your-score-hp');
+const scoreMessage = document.getElementById('score-message-hp');
 
 
 let score = 0;
 let count = 0;
 let moreQuestions = [];
 let nextQuestion = {};
-let maximumQuestions = 10;
 let randomQuestion;
 let answerChosen = false;
 
@@ -123,72 +120,72 @@ let harryPotterQuestions = [{
         d: "Wingardium Leviosa",
         correctAnswer: "d"
     }
-]
+];
 // start button
-startBtn.addEventListener('click', quizStart)
+startBtn.addEventListener('click', quizStart);
 
 //begin button
-beginBtn.addEventListener('click', beginQuiz)
+beginBtn.addEventListener('click', beginQuiz);
 
 // next button
-nextBtn.addEventListener('click', nextButton)
+nextBtn.addEventListener('click', nextButton);
 
 //result button
-resultBtn.addEventListener('click', finalResult)
+resultBtn.addEventListener('click', finalResult);
 
 //reset button
-resetBtn.addEventListener('click', quizStart)
+resetBtn.addEventListener('click', quizStart);
 
 //exit button
-exitBtn.addEventListener('click', returnHome)
+exitBtn.addEventListener('click', returnHome);
 
 function quizStart() {
-    startBtn.classList.add('hide')
-    startPage.classList.add('hide')
-    questions.classList.add('hide')
-    resultBtn.classList.add('hide')
-    nextBtn.classList.add('hide')
-    rulesPage.classList.remove('hide')
-    resultSection.classList.add('hide')
+    startBtn.classList.add('hide');
+    startPage.classList.add('hide');
+    questions.classList.add('hide');
+    resultBtn.classList.add('hide');
+    nextBtn.classList.add('hide');
+    rulesPage.classList.remove('hide');
+    resultSection.classList.add('hide');
     userScore.innerText = 0;
 
 
-    choice1.classList.remove('incorrect')
-    choice2.classList.remove('incorrect')
-    choice3.classList.remove('incorrect')
-    choice4.classList.remove('incorrect')
-    choice1.classList.remove('correct')
-    choice2.classList.remove('correct')
-    choice3.classList.remove('correct')
-    choice4.classList.remove('correct')
+    choice1.classList.remove('incorrect');
+    choice2.classList.remove('incorrect');
+    choice3.classList.remove('incorrect');
+    choice4.classList.remove('incorrect');
+    choice1.classList.remove('correct');
+    choice2.classList.remove('correct');
+    choice3.classList.remove('correct');
+    choice4.classList.remove('correct');
 
 }
 
 
 function beginQuiz() {
 
-    rulesPage.classList.add('hide')
-    questions.classList.remove('hide')
+    rulesPage.classList.add('hide');
+    questions.classList.remove('hide');
 
     score = 0;
     count = 0;
     randomQuestion = 0;
-    moreQuestions = [...harryPotterQuestions]
-    getQuestion()
+    moreQuestions = [...harryPotterQuestions];
+    getQuestion();
 }
 
 function getQuestion() {
 
-    nextBtn.classList.add('hide')
+    nextBtn.classList.add('hide');
     count++;
     questionCount.innerText = count;
 
     if (count >= 10) {
-        nextBtn.classList.add('hide')
+        nextBtn.classList.add('hide');
     }
 
-    randomQuestion = Math.floor(Math.random() * moreQuestions.length)
-    nextQuestion = moreQuestions[randomQuestion]
+    randomQuestion = Math.floor(Math.random() * moreQuestions.length);
+    nextQuestion = moreQuestions[randomQuestion];
     questionTitle.innerText = nextQuestion.question;
 
     moreQuestions.splice(randomQuestion, 1);
@@ -196,12 +193,12 @@ function getQuestion() {
 
     choice.forEach(function (answer) {
         const answerBtn = answer.dataset.option;
-        answer.innerText = nextQuestion[answerBtn]
-        answer.addEventListener('click', answerSelection)
+        answer.innerText = nextQuestion[answerBtn];
+        answer.addEventListener('click', answerSelection);
 
     });
 
-};
+}
 
 
 function answerSelection(e) {
@@ -222,10 +219,10 @@ function answerSelection(e) {
     }
 
 
-    nextBtn.classList.remove('hide')
+    nextBtn.classList.remove('hide');
     if (count >= 10) {
-        nextBtn.classList.add('hide')
-        resultBtn.classList.remove('hide')
+        nextBtn.classList.add('hide');
+        resultBtn.classList.remove('hide');
     }
 
 
@@ -244,40 +241,40 @@ function nextButton() {
 
     randomQuestion++;
 
-    getQuestion(randomQuestion)
+    getQuestion(randomQuestion);
 
-    choice1.classList.remove('incorrect')
-    choice2.classList.remove('incorrect')
-    choice3.classList.remove('incorrect')
-    choice4.classList.remove('incorrect')
-    choice1.classList.remove('correct')
-    choice2.classList.remove('correct')
-    choice3.classList.remove('correct')
-    choice4.classList.remove('correct')
+    choice1.classList.remove('incorrect');
+    choice2.classList.remove('incorrect');
+    choice3.classList.remove('incorrect');
+    choice4.classList.remove('incorrect');
+    choice1.classList.remove('correct');
+    choice2.classList.remove('correct');
+    choice3.classList.remove('correct');
+    choice4.classList.remove('correct');
 }
 
 
 function finalResult() {
-    resultSection.classList.remove('hide')
-    questions.classList.add('hide')
-    yourScore.innerText = score
+    resultSection.classList.remove('hide');
+    questions.classList.add('hide');
+    yourScore.innerText = score;
 
     if (score <= 10) {
-        scoreMessage.innerText = ` You're a WIZARD!`
+        scoreMessage.innerText = ` You're a WIZARD!`;
     }
     if (score <= 8) {
-        scoreMessage.innerText = ` Nearly as smart as Hermione.... `
+        scoreMessage.innerText = ` Nearly as smart as Hermione.... `;
 
         if (score <= 6) {
-            scoreMessage.innerText = ` Not quite Gryfinndor standards`
+            scoreMessage.innerText = ` Not quite Gryfinndor standards`;
         }
     }
     if (score <= 3) {
-        scoreMessage.innertext = `You must be a muggle.... try again!`
+        scoreMessage.innertext = `You must be a muggle.... try again!`;
     }
 
 }
 
 function returnHome() {
-    location.href = "index.html"
+    location.href = "index.html";
 }
