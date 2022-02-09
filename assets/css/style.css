@@ -23,7 +23,6 @@ body {
     margin: 10px;
     border: 1px solid;
     color: white;
-    opacity: 1px;
     font-size: 30px;
     text-align: center;
 
@@ -94,13 +93,13 @@ body {
 
 .final-score {
     font-size: 20px;
-    width: 100;
+    width: 100%;
     padding: 10px;
 }
 
 .final-score-hp {
     font-size: 20px;
-    width: 100;
+    width: 100%;
     padding: 10px;
     color: white;
 }
@@ -245,7 +244,7 @@ p.choice:hover {
 
 .main-heading {
     color: white;
-    font-size: 70px;
+    font-size: 90px;
     letter-spacing: 2px;
     padding: 20px 20px 5px 20px;
 
@@ -553,13 +552,10 @@ footer {
     .tag-line {
         font-size: 50px;
     }
-
-    .main-heading {
-        font-size: 50px;
-    }
+ 
 }
 
-@media screen and (min-width:540px) and (max-width:850px) {
+@media screen and (min-width:540px) and (max-width:849px) {
 
     .header-photo {
         height: 150px;
@@ -615,7 +611,7 @@ footer {
 
     .slide-hp {
         width: 85%;
-        padding: 0;
+        padding: 5px;
 
     }
 
@@ -688,7 +684,10 @@ footer {
         font-size: 15px;
         margin: 10px;
     }
-
+    #result-btn-hp{
+        font-size: 15px;
+        margin:10px;
+}
     p.choice {
         font-size: 18px;
     }
