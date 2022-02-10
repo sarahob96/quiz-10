@@ -1,35 +1,35 @@
 //start section
-const startBtn = document.getElementById("start-btn")
-const startPage = document.getElementById("start-page")
+const startBtn = document.getElementById("start-btn");
+const startPage = document.getElementById("start-page");
 
 //rules section
-const rulesPage = document.getElementById("quiz-rules")
-const beginBtn = document.getElementById("begin")
+const rulesPage = document.getElementById("quiz-rules");
+const beginBtn = document.getElementById("begin");
 
 //questions section
-const questionCount = document.getElementById("counter")
-const questions = document.getElementById("quiz-section")
-const questionTitle = document.getElementById("antarctica-questions")
-const nextBtn = document.getElementById("next-btn")
-const choiceBtn = document.getElementById("antarctica-answers")
-const choice = Array.from(document.querySelectorAll(".choice"))
-const choiceDiv = document.getElementsByClassName("choice-button")
-const userScore = document.getElementById("user-score")
-const choice1 = document.getElementById('choice1')
-const choice2 = document.getElementById('choice2')
-const choice3 = document.getElementById('choice3')
-const choice4 = document.getElementById('choice4')
-const correctOption = document.getElementById('correct-option')
-const correctOptionContainer = document.getElementById('correct-option-container')
+const questionCount = document.getElementById("counter");
+const questions = document.getElementById("quiz-section");
+const questionTitle = document.getElementById("antarctica-questions");
+const nextBtn = document.getElementById("next-btn");
+const choiceBtn = document.getElementById("antarctica-answers");
+const choice = Array.from(document.querySelectorAll(".choice"));
+const choiceDiv = document.getElementsByClassName("choice-button");
+const userScore = document.getElementById("user-score");
+const choice1 = document.getElementById('choice1');
+const choice2 = document.getElementById('choice2');
+const choice3 = document.getElementById('choice3');
+const choice4 = document.getElementById('choice4');
+const correctOption = document.getElementById('correct-option');
+const correctOptionContainer = document.getElementById('correct-option-container');
 
 //results section
 
-const resultBtn = document.getElementById("result-btn")
-const resultSection = document.getElementById("results-container")
-const resetBtn = document.getElementById("reset")
-const exitBtn = document.getElementById('exit')
-const yourScore = document.getElementById('your-score')
-const scoreMessage = document.getElementById("score-message")
+const resultBtn = document.getElementById("result-btn");
+const resultSection = document.getElementById("results-container");
+const resetBtn = document.getElementById("reset");
+const exitBtn = document.getElementById('exit');
+const yourScore = document.getElementById('your-score');
+const scoreMessage = document.getElementById("score-message");
 
 
 
@@ -140,72 +140,70 @@ let antarcticaQuestions = [{
 
         correctAnswer: "d"
     }
-]
+];
 
 
 // start button
-startBtn.addEventListener('click', quizStart)
+startBtn.addEventListener('click', quizStart);
 
 //begin button
-beginBtn.addEventListener('click', beginQuiz)
+beginBtn.addEventListener('click', beginQuiz);
 
 // next button
-nextBtn.addEventListener('click', nextButton)
+nextBtn.addEventListener('click', nextButton);
 
 //result button
-resultBtn.addEventListener('click', finalResult)
+resultBtn.addEventListener('click', finalResult);
 
 //reset button
-resetBtn.addEventListener('click', quizStart)
+resetBtn.addEventListener('click', quizStart);
 
 //exit button
-exitBtn.addEventListener('click', returnHome)
+exitBtn.addEventListener('click', returnHome);
 
 function quizStart() {
-    startBtn.classList.add('hide')
-    startPage.classList.add('hide')
-    questions.classList.add('hide')
-    resultBtn.classList.add('hide')
-    nextBtn.classList.add('hide')
-    rulesPage.classList.remove('hide')
-    resultSection.classList.add('hide')
+    startBtn.classList.add('hide');
+    startPage.classList.add('hide');
+    questions.classList.add('hide');
+    resultBtn.classList.add('hide');
+    nextBtn.classList.add('hide');
+    rulesPage.classList.remove('hide');
+    resultSection.classList.add('hide');
     userScore.innerText = 0;
 
-    choice1.classList.remove('incorrect')
-    choice2.classList.remove('incorrect')
-    choice3.classList.remove('incorrect')
-    choice4.classList.remove('incorrect')
-    choice1.classList.remove('correct')
-    choice2.classList.remove('correct')
-    choice3.classList.remove('correct')
-    choice4.classList.remove('correct')
+    choice1.classList.remove('incorrect');
+    choice2.classList.remove('incorrect');
+    choice3.classList.remove('incorrect');
+    choice4.classList.remove('incorrect');
+    choice1.classList.remove('correct');
+    choice2.classList.remove('correct');
+    choice3.classList.remove('correct');
+    choice4.classList.remove('correct');
 }
 
 
 function beginQuiz() {
 
-    rulesPage.classList.add('hide')
-    questions.classList.remove('hide')
+    rulesPage.classList.add('hide');
+    questions.classList.remove('hide');
 
     score = 0;
     count = 0;
     randomQuestion = 0;
-    moreQuestions = [...antarcticaQuestions]
-    getQuestion()
+    moreQuestions = [...antarcticaQuestions];
+    getQuestion();
 }
-
 function getQuestion() {
 
-    nextBtn.classList.add('hide')
+    nextBtn.classList.add('hide');
     count++;
     questionCount.innerText = count;
 
     if (count >= 10) {
-        nextBtn.classList.add('hide')
+        nextBtn.classList.add('hide');
     }
-
-    randomQuestion = Math.floor(Math.random() * moreQuestions.length)
-    nextQuestion = moreQuestions[randomQuestion]
+    randomQuestion = Math.floor(Math.random() * moreQuestions.length);
+    nextQuestion = moreQuestions[randomQuestion];
     questionTitle.innerText = nextQuestion.question;
 
     moreQuestions.splice(randomQuestion, 1);
@@ -214,13 +212,11 @@ function getQuestion() {
 
     choice.forEach(function (answer) {
         const answerBtn = answer.dataset.option;
-        answer.innerText = nextQuestion[answerBtn]
-        answer.addEventListener('click', answerSelection)
-    })
+        answer.innerText = nextQuestion[answerBtn];
+        answer.addEventListener('click', answerSelection);
+    });
 
 }
-
-
 function answerSelection(e) {
 
     if (answerChosen === false) return;
@@ -239,64 +235,57 @@ function answerSelection(e) {
 
     }
 
-    nextBtn.classList.remove('hide')
+    nextBtn.classList.remove('hide');
 
     if (count >= 10) {
-        nextBtn.classList.add('hide')
-        resultBtn.classList.remove('hide')
+        nextBtn.classList.add('hide');
+        resultBtn.classList.remove('hide');
     }
-
 }
-
 
 function increaseScore() {
     score++;
 
     userScore.innerText = score;
-
 }
-
 
 function nextButton() {
 
     randomQuestion++;
 
-    getQuestion(randomQuestion)
+    getQuestion(randomQuestion);
 
-    correctOptionContainer.classList.add('hide')
-    choice1.classList.remove('incorrect')
-    choice2.classList.remove('incorrect')
-    choice3.classList.remove('incorrect')
-    choice4.classList.remove('incorrect')
-    choice1.classList.remove('correct')
-    choice2.classList.remove('correct')
-    choice3.classList.remove('correct')
-    choice4.classList.remove('correct')
+    correctOptionContainer.classList.add('hide');
+    choice1.classList.remove('incorrect');
+    choice2.classList.remove('incorrect');
+    choice3.classList.remove('incorrect');
+    choice4.classList.remove('incorrect');
+    choice1.classList.remove('correct');
+    choice2.classList.remove('correct');
+    choice3.classList.remove('correct');
+    choice4.classList.remove('correct');
 }
 
-
 function finalResult() {
-    resultSection.classList.remove('hide')
-    questions.classList.add('hide')
-    yourScore.innerText = score
+    resultSection.classList.remove('hide');
+    questions.classList.add('hide');
+    yourScore.innerText = score;
 
     if (score <= 10) {
-        scoreMessage.innerText = ` ICE champion.. You're an expert!`
+        scoreMessage.innerText = ` ICE champion.. You're an expert!`;
     }
     if (score <= 8) {
-        scoreMessage.innerText = ` SnOw Close!!  `
+        scoreMessage.innerText = ` SnOw Close!!  `;
 
         if (score <= 6) {
-            scoreMessage.innerText = `N-ICE try!`
+            scoreMessage.innerText = `N-ICE try!`;
         }
     }
     if (score <= 3) {
-        scoreMessage.innertext = `Brrrrrrr.. better luck next time!`
+        scoreMessage.innertext = `Brrrrrrr.. better luck next time!`;
     }
 
-
 }
-
 function returnHome() {
-    location.href = "index.html"
+    location.href = "index.html";
 }
