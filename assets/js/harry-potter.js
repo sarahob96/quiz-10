@@ -35,7 +35,7 @@ let nextQuestion = {};
 let randomQuestion;
 let answerChosen = false;
 
-
+// questions array
 
 let harryPotterQuestions = [{
         question: "Harrys uncle and aunt, the Dursleys, live at what address?",
@@ -139,6 +139,9 @@ resetBtn.addEventListener('click', quizStart);
 //exit button
 exitBtn.addEventListener('click', returnHome);
 
+// resets the quiz, ensuring no answers are kept from previous
+
+
 function quizStart() {
     startBtn.classList.add('hide');
     startPage.classList.add('hide');
@@ -160,6 +163,7 @@ function quizStart() {
     choice4.classList.remove('correct');
 
 }
+// hides the rules page, resets variables and shows the question/answers element
 
 
 function beginQuiz() {
@@ -173,6 +177,8 @@ function beginQuiz() {
     moreQuestions = [...harryPotterQuestions];
     getQuestion();
 }
+
+// obtains a random question from the question array and displays the question to the user
 
 function getQuestion() {
 
@@ -188,8 +194,16 @@ function getQuestion() {
     nextQuestion = moreQuestions[randomQuestion];
     questionTitle.innerText = nextQuestion.question;
 
+    // splices the question given so it will not repeat
+
     moreQuestions.splice(randomQuestion, 1);
+
+    // variable which allows user to choose answer
+
     answerChosen = true;
+
+    // displays the answers as choices, using the dataset attribute
+// registers the user clicking answer
 
     choice.forEach(function (answer) {
         const answerBtn = answer.dataset.option;
@@ -200,6 +214,8 @@ function getQuestion() {
 
 }
 
+//when an answer is selected, variable turns to false. User can no longer select another answer
+// checks to see if user's answer is correct or incorrect
 
 function answerSelection(e) {
 
@@ -207,9 +223,13 @@ function answerSelection(e) {
 
     answerChosen = false;
 
+    //code adapted from Web Dev Simplified
+
     const selectedOption = e.target;
     const userAnswer = selectedOption.dataset.option;
 
+   // checks to see if the users answer is correct/incorrect
+ 
     const result = userAnswer == nextQuestion.correctAnswer ? "correct" : "incorrect";
     selectedOption.parentElement.classList.add(result);
 
@@ -218,6 +238,7 @@ function answerSelection(e) {
         increaseScore();
     }
 
+// when 10 Questions have displayed, show the result button
 
     nextBtn.classList.remove('hide');
     if (count >= 10) {
@@ -227,7 +248,7 @@ function answerSelection(e) {
 
 
 }
-
+// increments the users score by 1
 
 function increaseScore() {
     score++;
@@ -243,6 +264,9 @@ function nextButton() {
 
     getQuestion(randomQuestion);
 
+    //removes correct/incorrect class once next button is clicked
+
+
     choice1.classList.remove('incorrect');
     choice2.classList.remove('incorrect');
     choice3.classList.remove('incorrect');
@@ -253,11 +277,14 @@ function nextButton() {
     choice4.classList.remove('correct');
 }
 
+// shows the result page and users score
 
 function finalResult() {
     resultSection.classList.remove('hide');
     questions.classList.add('hide');
     yourScore.innerText = score;
+
+//displays message depending on score value
 
     if (score <= 10) {
         scoreMessage.innerText = ` You're a WIZARD!`;
@@ -274,6 +301,7 @@ function finalResult() {
     }
 
 }
+// returns user to the main page
 
 function returnHome() {
     location.href = "index.html";

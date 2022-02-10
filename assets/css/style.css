@@ -3,7 +3,6 @@
     padding: 0;
 }
 
-
 body {
 
     font-family: Darker Grotesque;
@@ -12,6 +11,109 @@ body {
     width: 100vw;
     box-sizing: border-box;
 }
+/* Main header section*/
+
+.main-heading {
+    color: white;
+    font-size: 90px;
+    letter-spacing: 2px;
+    padding: 20px 20px 5px 20px;
+
+
+}
+
+.tag-line {
+    padding: 0px 20px 10px 20px;
+    color: white;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+
+.header-photo {
+    float: right;
+    height: 200px;
+    top: 20px;
+    right: 30px;
+    position: absolute;
+}
+
+/* weekly quiz section*/
+
+.weekly-quiz-heading {
+
+    background-color: white;
+    color: #2A6673;
+    letter-spacing: 2px;
+    font-size: 160%;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.about-heading {
+    text-decoration: underline;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.about-text {
+    text-align: center;
+    padding: 20px;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.last-quiz-heading {
+    text-decoration: underline;
+    color: #2A6673;
+    letter-spacing: 2px;
+    font-size: 150%;
+    text-align: center;
+    padding-top: 50px;
+
+}
+.user{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.weekly-quiz {
+
+
+    width: 100%;
+    padding-top: 10px;
+    position: relative;
+}
+
+.antarctica-quiz {
+
+    width: 80%;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    overflow: hidden;
+
+}
+.iceberg-image {
+
+    border-radius: 25px;
+    max-height: 100%;
+    width: 80%;
+
+}
+
+.harry-potter-image {
+    max-height: 100%;
+    width: 80%;
+    border-radius: 25px;
+}
+
+/* Quiz section */
+
+
+/* start page */
 
 .choice-button {
 
@@ -27,6 +129,7 @@ body {
     text-align: center;
 
 }
+/* Question section*/
 
 .choice-hp {
     background-color: #6c66be;
@@ -54,7 +157,7 @@ body {
     background-color: white;
     padding: 10px;
 }
-
+/* result btm */
 #result-btn-hp {
     font-size: 20px;
     border-radius: 25px;
@@ -68,14 +171,6 @@ body {
     background-color: white;
     padding: 10px;
 
-}
-
-.header-photo {
-    float: right;
-    height: 200px;
-    top: 20px;
-    right: 30px;
-    position: absolute;
 }
 
 .message {
@@ -242,22 +337,6 @@ p.choice:hover {
     padding: 30px;
 }
 
-.main-heading {
-    color: white;
-    font-size: 90px;
-    letter-spacing: 2px;
-    padding: 20px 20px 5px 20px;
-
-
-}
-
-.tag-line {
-    padding: 0px 20px 10px 20px;
-    color: white;
-    font-weight: bolder;
-    font-size: 30px;
-}
-
 .correct {
     background-color: green;
 }
@@ -266,47 +345,6 @@ p.choice:hover {
     background-color: red;
 }
 
-.weekly-quiz-heading {
-
-    background-color: white;
-    color: #2A6673;
-    letter-spacing: 2px;
-    font-size: 160%;
-    text-align: center;
-    padding: 20px;
-    margin-top: 50px;
-
-
-}
-
-.about-heading {
-    text-decoration: underline;
-    color: white;
-    letter-spacing: 2px;
-    font-size: 40px;
-    text-align: center;
-
-
-}
-
-.about-text {
-    text-align: center;
-    padding: 20px;
-    font-weight: bolder;
-    font-size: 30px;
-}
-
-.last-quiz-heading {
-    text-decoration: underline;
-    color: #2A6673;
-    letter-spacing: 2px;
-    font-size: 150%;
-    text-align: center;
-    padding-top: 50px;
-
-}
-
-/* weekly-quiz section*/
 
 .start-heading {
     letter-spacing: 2px;
@@ -377,24 +415,6 @@ button.btn:hover {
 
 }
 
-.weekly-quiz {
-
-
-    width: 100%;
-    padding-top: 10px;
-    position: relative;
-}
-
-.antarctica-quiz {
-
-    width: 80%;
-    text-align: center;
-    padding: 20px;
-    margin: 0 auto;
-    overflow: hidden;
-
-}
-
 .harry-title {
     font-size: 30px;
     padding-bottom: 0;
@@ -421,34 +441,16 @@ button.btn:hover {
     font-size: 50px;
     text-align: center;
     color: white;
+    padding-bottom: 10px;
 
 }
 
-a {
-    text-decoration: none;
-    color: white;
-
-}
 
 .begin-btn {
     font-size: 20px;
     margin: 20px;
     border-radius: 25px;
     padding: 10px;
-}
-
-.iceberg-image {
-
-    border-radius: 25px;
-    max-height: 100%;
-    width: 80%;
-
-}
-
-.harry-potter-image {
-    max-height: 100%;
-    width: 80%;
-    border-radius: 25px;
 }
 
 .last-quiz {
@@ -465,7 +467,6 @@ a {
     margin: 0 auto;
 
 }
-
 
 .harry-potter-background {
     height: 100vh;
@@ -492,22 +493,13 @@ a {
     background-size: cover;
 }
 
-footer {
-
-    bottom: 0px;
-}
-
-
 .start-page {
     position: relative;
-
-
 }
 
 .hide {
     display: none;
 }
-
 
 .welcome {
     width: 60%;
@@ -519,6 +511,13 @@ footer {
 
 }
 
+/* footer section */
+
+a {
+    text-decoration: none;
+    color: white;
+
+}
 .socials>li {
     display: inline;
 }

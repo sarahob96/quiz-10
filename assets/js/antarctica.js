@@ -42,6 +42,8 @@ let randomQuestion;
 let answerChosen = false;
 let correct = null;
 
+//questions array
+
 let antarcticaQuestions = [{
         question: "Which of these animals do you NOT get in Antarctica?",
         a: "Penguins",
@@ -161,6 +163,8 @@ resetBtn.addEventListener('click', quizStart);
 //exit button
 exitBtn.addEventListener('click', returnHome);
 
+// resets the quiz, ensuring no answers are kept from previous
+
 function quizStart() {
     startBtn.classList.add('hide');
     startPage.classList.add('hide');
@@ -181,6 +185,7 @@ function quizStart() {
     choice4.classList.remove('correct');
 }
 
+// hides the rules page, resets variables and shows the question/answers element
 
 function beginQuiz() {
 
@@ -193,6 +198,9 @@ function beginQuiz() {
     moreQuestions = [...antarcticaQuestions];
     getQuestion();
 }
+
+// obtains a random question from the question array and displays the question to the user
+
 function getQuestion() {
 
     nextBtn.classList.add('hide');
@@ -206,9 +214,15 @@ function getQuestion() {
     nextQuestion = moreQuestions[randomQuestion];
     questionTitle.innerText = nextQuestion.question;
 
+// splices the question given so it will not repeat
+
     moreQuestions.splice(randomQuestion, 1);
+
+// variable which allows user to choose answer
     answerChosen = true;
 
+// displays the answers as choices, using the dataset attribute
+// registers the user clicking answer
 
     choice.forEach(function (answer) {
         const answerBtn = answer.dataset.option;
@@ -217,18 +231,26 @@ function getQuestion() {
     });
 
 }
+
+// when an answer is selected, variable turns to false. User can no longer select another answer
+// checks to see if users answer is correct or incorrect
+
 function answerSelection(e) {
 
     if (answerChosen === false) return;
 
     answerChosen = false;
 
+    //code adapted from Web Dev Simplified
 
     const selectedOption = e.target;
     const userAnswer = selectedOption.dataset.option;
 
+// checks to see if the users answer is correct/incorrect
+
     const result = userAnswer == nextQuestion.correctAnswer ? "correct" : "incorrect";
     selectedOption.parentElement.classList.add(result);
+
 
     if (result === 'correct') {
         increaseScore();
@@ -237,11 +259,15 @@ function answerSelection(e) {
 
     nextBtn.classList.remove('hide');
 
+// when 10 Questions have displayed, show the result button
+
     if (count >= 10) {
         nextBtn.classList.add('hide');
         resultBtn.classList.remove('hide');
     }
 }
+
+// increments the users score by 1
 
 function increaseScore() {
     score++;
@@ -255,6 +281,8 @@ function nextButton() {
 
     getQuestion(randomQuestion);
 
+    //removes correct/incorrect class once next button is clicked
+
     correctOptionContainer.classList.add('hide');
     choice1.classList.remove('incorrect');
     choice2.classList.remove('incorrect');
@@ -266,10 +294,14 @@ function nextButton() {
     choice4.classList.remove('correct');
 }
 
+// shows the result page and users score
+
 function finalResult() {
     resultSection.classList.remove('hide');
     questions.classList.add('hide');
     yourScore.innerText = score;
+
+//displays message depending on score value
 
     if (score <= 10) {
         scoreMessage.innerText = ` ICE champion.. You're an expert!`;
@@ -286,6 +318,9 @@ function finalResult() {
     }
 
 }
+
+// returns user to the main page
+
 function returnHome() {
     location.href = "index.html";
 }
