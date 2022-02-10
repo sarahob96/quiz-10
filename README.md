@@ -19,6 +19,15 @@
 * Deployment
 * Credits
 
+![multidevice](readme/multidevice-main.png)
+
+![multidevice](readme/multidevice-hp.png)
+
+![multidevice](readme/multidevice-ant.png)
+
+
+Link to the live website [here.](https://sarahob96.github.io/quiz-10/)
+
 ### Introduction
 
 This website offers a new quiz weekly to the user. Each quiz has 10 questions and the user will be given their score /10 once completed. The site entices the user to engage by allowing users to submit quizzes through their social media platforms. 
@@ -60,6 +69,8 @@ Tablet <br>
 Phone
 ![phone](readme/phone-wireframe.png)
 ![phone-quiz](readme/phone-quiz.png)
+
+Link to the live website [here.](https://sarahob96.github.io/quiz-10/)
 ## Design
 
 ### Colour Scheme
@@ -69,8 +80,8 @@ RGB
  * I used colour space to create a neighbour palette involving two main colours, blue and purple. I used them throught out the site and kept the colour palette in theme with the quiz type themselves. 
  
 ### Typography
- * Darker Grotesque
- * Roboto
+ * Darker Grotesque was the photo used across the site. Initially I was going with two fonts but thought it looked a lot simpler using the one. It didn't takeaway from the images and colours used across the site.
+ 
 
 ### Imagery
 
@@ -86,12 +97,14 @@ RGB
 
   #### The Main page
   * The landing page displays an eye catching image of 'this weeks quiz'. The site name and tag line instantly inform the user what the sites purpose is and what to expect.
+  [!main](readme/main-hero.png)
   
   * The question mark image is used in the header alongside the main heading and tagline to further push the message of the site to the user.
   
   * An about section is seen below the the first quiz section to inform the user further on what to expect from the site. Here, they learn the quiz 10 symbolises the 10 question format used for in all quizzes.  They're also informed that quizzes shown are sent in from a user themselves, adding a fun element to the site, allowing the user to engage with the site in another way. This will entice the user to take part and revisit the site.
   
   * Similary, an image and quiz title for 'next weeks' quiz follows after. This provides an additional interactive option for the user and allows a user to revisit and take the previous quiz if they missed out on the previous week.
+  [!main](readme/main-hp.png)
   
   * A footer contains three social media links which allows the user to get in contact via these socials. 
   
@@ -112,6 +125,7 @@ RGB
       
       
       Phone display
+      
       ![rulespagephone](readme/quiz-rules-phone.png)
       
       
@@ -124,6 +138,7 @@ RGB
    
    
    Phone display 
+   
    ![phone](readme/quiz-question-phone.png)
    
    
@@ -136,9 +151,11 @@ RGB
    - An 'exit' button takes the user back to the QUIZ 10 home page. There they have the option to try the other quiz or get in touch with the site via social media.
  
   Desktop display
+  
   ![desktop](readme/quiz-result-desktop.png)
   
-  Phone display
+  Phone display 
+  
   ![phone](readme/quiz-results-phone.png)
   
 
@@ -217,9 +234,11 @@ I carried out a variety of manual tests to ensure the site worked and displayed 
 - All code was ran through online validation services to ensure my code was valid and free from errors.
 
 * CSS validator 
-
+ ![css](readme/css.val.png)
+ 
 * HTML validator
-
+  ![html](readme/html-val.png)
+  
 * Javascript Validator
 
 * Lighthouse - Google chrome dev tools 
@@ -246,5 +265,17 @@ I carried out a variety of manual tests to ensure the site worked and displayed 
  5) Click Save
 
 
+## Credits 
 
+### Media 
+ - Pixabay 
+ - Font awesome 
 
+### Code
+- Credit to 'Web dev developer' on you tube where I used and adapted part of the code for checking answers
+- A mention to  stack overflow for some help with problems.
+- A special mention to Oisin from the code institute for helping me with an issue I had.
+
+### Acknowledgments
+- A special mention to my mentor, Narender Singh at the code institute for his advice along the way during the project.
+- Thanks to friends and family who helped test the quiz out and gave feedback where needed.
