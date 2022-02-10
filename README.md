@@ -28,9 +28,9 @@ The site will use HTML, CSS and Javascript to create an interactive, engaging an
 ## UX and UI
 
 ### User Goals
-* As a user, I want to easily navigate through the site.
-* As a user, I want to be able to play the current weeks quiz.
-* As a user, I want to see what score I have achieved from the quiz.
+* As a first time user, I want to easily navigate through the site.
+* As a first time user, I want to be able to play the current weeks quiz.
+* As a first time user, I want to see what score I have achieved from the quiz.
 
 ### Returning User Goals
 * As a returning user, I want to play the most recent quiz.
@@ -87,13 +87,43 @@ RGB
     
 ### Technologies used
 
-* Balasmaiq
-* Font Awesome
-* Google fonts
-* Beautify
-* colour-space
-* Techsini 
-* W3C Markup, CSS validations and JShint
-* favicon
-* Google chrome- dev tools
-       
+- [Balsamiq](https://balsamiq.com/)
+     * I used Balsamiq to create my wireframes for phone, tablet and desktop devices.
+-[Font Awesome](https://fontawesome.com/)
+    * Font awesome icons were used on the site for the social media icons in the footer aswell as featuring in the final results page of both quizzes
+-Google fonts
+    * Both fonts that I used through the site were taken from google fonts.
+-Beautify
+    * The VS code extension was used to auto format my code
+-colour-space
+    * A neighbour palette of colours was generated on colour space to be used on site
+-Techsini 
+    * A multi device image was generated on [techsini.com](https://techsini.com/multi-mockup/)
+ -W3C Markup, CSS and JShint validators
+    * I used the [HTML](https://validator.w3.org/) , [CSS](https://jigsaw.w3.org/css-validator/) and [JS](https://jshint.com/) to validate my code and ensure there were no errors.
+ -favicon
+    * I upload an image to favicon which created a usable icon for my site.
+- Google chrome- dev tools
+    * Devtools from google chrome was used heavily during the project while styling the project and while adding media queries. It also aided in finding issues with my javascript code.
+
+## Testing
+
+### User Story Testing
+  
+- "As a first time user, I want to easily navigate through the site."
+  * The easy layout of the main page allows the user to easily navigate between the two quizzes on the home page. The quizzes allow the user to return to the main home page once completion of quiz has occurred.
+  
+- "As a first time user, I want to be able to play the current weeks quiz."
+  * The user is welcomed to the site by the current quiz on display as soon as the home page loads. This aswell as the easy layout of the quiz ensures the user can play the quiz easily and effectively.
+  
+  
+- "As a first time user, I want to see what score I have achieved from the quiz."
+  * The user can see what score out of 10 they have achieved after completing all 10 questions.
+
+
+ " As a returning user, I want to play the most recent quiz."
+  * A new quiz is uploaded on a weekly basis so returning quiz users will get to experience a new quiz"
+  "As a returning user, I want to play last weeks quiz."
+   * Last weeks quiz is displayed further down the home page. Last week's quiz ensures users have had enough time to complete older quizzes they may have missed.
+  "As a returning user, I want to find the sites social links."
+  * The social links are displayed down at the bottom of the footer on the main pages so the user can access all social platforms 
