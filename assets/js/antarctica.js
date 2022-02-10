@@ -39,8 +39,8 @@ let moreQuestions = [];
 let nextQuestion = {};
 let maximumQuestions = 10;
 let randomQuestion;
-let answerChosen = false;
-let correct = null;
+
+
 
 //questions array
 
@@ -256,6 +256,10 @@ function answerSelection(e) {
         increaseScore();
 
     }
+    else {
+        correctOption.innerText = nextQuestion.correctAnswer
+        correctOptionContainer.classList.remove('hide')
+    }
 
     nextBtn.classList.remove('hide');
 
@@ -278,6 +282,8 @@ function increaseScore() {
 function nextButton() {
 
     randomQuestion++;
+
+    correctOptionContainer.classList.add('hide')
 
     getQuestion(randomQuestion);
 

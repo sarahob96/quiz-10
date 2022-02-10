@@ -17,6 +17,9 @@ const choice1 = document.getElementById('choice-1');
 const choice2 = document.getElementById('choice-2');
 const choice3 = document.getElementById('choice-3');
 const choice4 = document.getElementById('choice-4');
+const correctOption = document.getElementById('correct-option');
+const correctOptionContainer = document.getElementById('correct-option-container');
+
 
 //results section
 
@@ -237,17 +240,22 @@ function answerSelection(e) {
     if (result === 'correct') {
         increaseScore();
     }
+    else {
+            correctOption.innerText = nextQuestion.correctAnswer
+            correctOptionContainer.classList.remove('hide')
+        }
+    
 
 // when 10 Questions have displayed, show the result button
 
     nextBtn.classList.remove('hide');
+
     if (count >= 10) {
         nextBtn.classList.add('hide');
         resultBtn.classList.remove('hide');
     }
-
-
 }
+
 // increments the users score by 1
 
 function increaseScore() {
@@ -261,6 +269,8 @@ function increaseScore() {
 function nextButton() {
 
     randomQuestion++;
+
+    correctOptionContainer.classList.add('hide')
 
     getQuestion(randomQuestion);
 

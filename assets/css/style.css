@@ -5,7 +5,7 @@
 
 body {
 
-    font-family: Darker Grotesque;
+    font-family: Darker Grotesque, sans-serif;
     background-color: #349db3;
     height: 100vh;
     width: 100vw;
@@ -125,7 +125,7 @@ body {
     margin: 10px;
     border: 1px solid;
     color: white;
-    font-size: 30px;
+    font-size: 23px;
     text-align: center;
 
 }
@@ -157,7 +157,14 @@ body {
     background-color: white;
     padding: 10px;
 }
-/* result btm */
+#correct-option-container{
+font-size:20px;
+padding: 10px 20px 20px 20px;
+color: black;
+
+}
+
+
 #result-btn-hp {
     font-size: 20px;
     border-radius: 25px;
