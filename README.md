@@ -82,7 +82,65 @@ RGB
 
 ### Site Layout
 
-* The site consists of a main home page which displays 'this weeks' and 'last weeks' quiz to the user. Once the quiz is clicked, a new window will apppear displaying the corresponding quiz. 
+* The site consists of a main home page which displays 'this weeks' and 'last weeks' quiz to the user. When either quiz is chosen by the user, a new window will appear containing the selected quiz. At the end of both quizzes, the user has the option to return to the home quiz page or retake the quiz.
+
+  #### The Main page
+  * The landing page displays an eye catching image of 'this weeks quiz'. The site name and tag line instantly inform the user what the sites purpose is and what to expect.
+  
+  * The question mark image is used in the header alongside the main heading and tagline to further push the message of the site to the user.
+  
+  * An about section is seen below the the first quiz section to inform the user further on what to expect from the site. Here, they learn the quiz 10 symbolises the 10 question format used for in all quizzes.  They're also informed that quizzes shown are sent in from a user themselves, adding a fun element to the site, allowing the user to engage with the site in another way. This will entice the user to take part and revisit the site.
+  
+  * Similary, an image and quiz title for 'next weeks' quiz follows after. This provides an additional interactive option for the user and allows a user to revisit and take the previous quiz if they missed out on the previous week.
+  
+  * A footer contains three social media links which allows the user to get in contact via these socials. 
+  
+  
+  #### The Quizzes
+  Both quizzes have the same structure and coding elements. 
+  Once the quiz is selected from the home page, the start section appears for the chosen quiz.
+  
+ * The start page 
+    - This consists of the quiz title and a simple start button
+     ![startpage](readme/quiz-start-desktop.png)
+  
+ * The rules page
+    - A number of rules are displayed to the user to inform the user in what to expect when taking the quiz
+
+      Desktop display
+      ![rulespagedesktop](readme/quiz-rules-desktop.png)
+      
+      
+      Phone display
+      ![rulespagephone](readme/quiz-rules-phone.png)
+      
+      
+* The question and answers
+   - The main quiz element is the Question and Answers page. Here we have our question and four answer choices. At the top left of the page we have our counter which tells the user what question they are on. On the top right, we have our score. This increments by one each time the user selects correctly.
+   - When an answer is selected, the user's answer is highlighted as either green (correct) or red (incorrect).
+  
+    Desktop display
+   ![desktop](readme/quiz-question-answer.png)
+   
+   
+   Phone display 
+   ![phone](readme/quiz-question-phone.png)
+   
+   
+   - The next button only appears as the user selects an answer.
+   - On the final question, a 'view your result' button appears to take the user to the final quiz section.
+
+* The result
+   - Here, the user can view their score and a message corresponding to the score is displayed. The message's displayed are quiz specific to suit the theme of the quiz. Further adding another element to allow the user to immerse in the quiz experience.
+   - A 'reset' quiz button is displayed, giving the user an option to retake the quiz if they were not happy with their score.
+   - An 'exit' button takes the user back to the QUIZ 10 home page. There they have the option to try the other quiz or get in touch with the site via social media.
+ 
+  Desktop display
+  ![desktop](readme/quiz-result-desktop.png)
+  
+  Phone display
+  ![phone](readme/quiz-results-phone.png)
+  
 
 ### Features to be implemented
 
@@ -99,7 +157,7 @@ RGB
    * Both fonts that I used through the site were taken from google fonts.      
 - Beautify
    * The VS code extension was used to auto format my code
-- colour-space
+- [Colour Space](https://mycolor.space/?hex=%23A75EC2&sub=1)
    * A neighbour palette of colours was generated on colour space to be used on site     
 - Techsini 
    * A multi device image was generated on [techsini.com](https://techsini.com/multi-mockup/)    
@@ -166,6 +224,7 @@ I carried out a variety of manual tests to ensure the site worked and displayed 
 
 * Lighthouse - Google chrome dev tools 
  - The lighthouse feature tested my site for performance, accessibility, best practices nd SEO. All scores were high for each category.
+  ![lighthouse](readme/lighthouse.png)
 
 ### Bugs/errors
 
