@@ -113,8 +113,6 @@ body {
 /* Quiz section */
 
 
-/* start page */
-
 .choice-button {
 
     height: 60px;
@@ -129,7 +127,6 @@ body {
     text-align: center;
 
 }
-/* Question section*/
 
 .choice-hp {
     background-color: #6c66be;
@@ -164,7 +161,6 @@ color: black;
 
 }
 
-
 #result-btn-hp {
     font-size: 20px;
     border-radius: 25px;
@@ -179,13 +175,11 @@ color: black;
     padding: 10px;
 
 }
-
 .message {
     font-size: 30px;
     padding: 20px;
 
 }
-
 .message-hp {
     font-size: 30px;
     padding: 20px;
@@ -309,14 +303,11 @@ p.choice {
 
     height: 100%;
     width: 100%;
-
 }
 
 p.choice:hover {
     cursor: pointer;
 }
-
-
 
 .slide {
     position: absolute;
@@ -451,7 +442,6 @@ button.btn:hover {
     padding-bottom: 10px;
 
 }
-
 
 .begin-btn {
     font-size: 20px;

@@ -240,9 +240,9 @@ function answerSelection(e) {
     if (result === 'correct') {
         increaseScore();
     }
-    else {
-            correctOption.innerText = nextQuestion.correctAnswer
-            correctOptionContainer.classList.remove('hide')
+     else {
+            correctOption.innerText = nextQuestion.correctAnswer;
+            correctOptionContainer.classList.remove('hide');
         }
     
 
@@ -270,7 +270,7 @@ function nextButton() {
 
     randomQuestion++;
 
-    correctOptionContainer.classList.add('hide')
+    correctOptionContainer.classList.add('hide');
 
     getQuestion(randomQuestion);
 

@@ -11,9 +11,7 @@ const questionCount = document.getElementById("counter");
 const questions = document.getElementById("quiz-section");
 const questionTitle = document.getElementById("antarctica-questions");
 const nextBtn = document.getElementById("next-btn");
-const choiceBtn = document.getElementById("antarctica-answers");
 const choice = Array.from(document.querySelectorAll(".choice"));
-const choiceDiv = document.getElementsByClassName("choice-button");
 const userScore = document.getElementById("user-score");
 const choice1 = document.getElementById('choice1');
 const choice2 = document.getElementById('choice2');
@@ -37,8 +35,8 @@ let score = 0;
 let count = 0;
 let moreQuestions = [];
 let nextQuestion = {};
-let maximumQuestions = 10;
 let randomQuestion;
+let answerChosen = false;
 
 
 
@@ -256,12 +254,12 @@ function answerSelection(e) {
         increaseScore();
 
     }
-    else {
-        correctOption.innerText = nextQuestion.correctAnswer
-        correctOptionContainer.classList.remove('hide')
-    }
+        else {
+        correctOption.innerText = nextQuestion.correctAnswer;
+        correctOptionContainer.classList.remove('hide');
+      }
 
-    nextBtn.classList.remove('hide');
+         nextBtn.classList.remove('hide');
 
 // when 10 Questions have displayed, show the result button
 
@@ -283,7 +281,7 @@ function nextButton() {
 
     randomQuestion++;
 
-    correctOptionContainer.classList.add('hide')
+    correctOptionContainer.classList.add('hide');
 
     getQuestion(randomQuestion);
 
